@@ -1,0 +1,9 @@
+extends:
+  - recommended
+
+features.openapi:
+  schemaExpansionLevel: 4
+  generateCodeSamples:
+    languages:
+      - lang: JavaScript
+      - lang: Node.js
