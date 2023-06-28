@@ -18,7 +18,7 @@
   "scripts": {
     "expand": "tsx ./script/bin/expandRef.ts",
     "_format": "prettier **",
-    "_doc": "redocly preview-docs expanded/openapi.yaml --use-community-edition --host 0.0.0.0",
+    "_doc": "redocly preview-docs expanded/openapi.yaml --use-community-edition",
     "format": "pnpm _format -w",
     "doc": "pnpm run expand && concurrently 'npm:expand watch' 'npm:_doc'",
     "findOrphan": "tsx ./script/bin/findOrphan.ts",
