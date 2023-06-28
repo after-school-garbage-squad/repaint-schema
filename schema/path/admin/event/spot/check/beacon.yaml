@@ -2,6 +2,8 @@ get:
   summary: Check spot status by iBeacon data
   description: Check spot status by iBeacon data
   operationId: checkSpotByBeacon
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
     required: true
     content:

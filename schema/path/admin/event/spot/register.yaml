@@ -2,6 +2,8 @@ post:
   summary: Register a new spot
   description: Register a new spot
   operationId: registerSpot
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
     required: true
     content:

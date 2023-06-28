@@ -7,3 +7,10 @@ components:
       required: true
       schema:
         $ref: ~/component/id.yaml#/spotID
+    eventID:
+      in: path
+      name: eventID
+      description: ID of event
+      required: true
+      schema:
+        $ref: ~/component/id.yaml#/eventID

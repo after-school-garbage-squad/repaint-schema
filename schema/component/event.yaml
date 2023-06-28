@@ -9,6 +9,8 @@ components:
         - name
         - contact
       properties:
+        id:
+          $ref: ./id.yaml#/eventID
         url:
           type: string
           description: URL of the event home page

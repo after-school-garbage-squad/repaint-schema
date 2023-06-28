@@ -3,6 +3,7 @@ get:
   description: Check spot status by QR code
   operationId: checkSpotByQRCode
   parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
     - $ref: ~/parameter/path.yaml#/spotID
   responses:
     200:
