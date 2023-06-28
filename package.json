@@ -3,17 +3,17 @@
   "type": "module",
   "devDependencies": {
     "@redocly/cli": "1.0.0-beta.129",
-    "@types/mkdirp": "^2.0.0",
-    "@types/node": "^20.3.2",
-    "chalk": "^5.2.0",
-    "chokidar": "^3.5.3",
-    "concurrently": "^8.2.0",
-    "mkdirp": "^3.0.1",
-    "prettier": "^2.8.8",
-    "tsx": "^3.12.7",
-    "typescript": "^5.1.3",
-    "url-join": "^5.0.0",
-    "yaml": "^2.3.1"
+    "@types/mkdirp": "2.0.0",
+    "@types/node": "20.3.2",
+    "chalk": "5.2.0",
+    "chokidar": "3.5.3",
+    "concurrently": "8.2.0",
+    "mkdirp": "3.0.1",
+    "prettier": "2.8.8",
+    "tsx": "3.12.7",
+    "typescript": "5.1.3",
+    "url-join": "5.0.0",
+    "yaml": "2.3.1"
   },
   "scripts": {
     "expand": "tsx ./script/bin/expandRef.ts",
