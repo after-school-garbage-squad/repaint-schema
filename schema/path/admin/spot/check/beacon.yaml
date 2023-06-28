@@ -1,0 +1,21 @@
+get:
+  summary: Check spot status by iBeacon data
+  description: Check spot status by iBeacon data
+  operationId: checkSpotByBeacon
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ~/component/beacon.yaml#/Beacon
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ~/component/spot.yaml#/Spot
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized

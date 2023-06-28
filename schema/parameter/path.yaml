@@ -1,0 +1,9 @@
+components:
+  parameters:
+    spotID:
+      in: path
+      name: spotID
+      description: ID of spot
+      required: true
+      schema:
+        $ref: ~/component/id.yaml#/spotID

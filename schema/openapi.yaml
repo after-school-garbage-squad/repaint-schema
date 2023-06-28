@@ -17,3 +17,9 @@ security: []
 paths:
   /admin/spot/register:
     $ref: ./path/admin/spot/register.yaml
+
+  /admin/spot/check/beacon:
+    $ref: ./path/admin/spot/check/beacon.yaml
+
+  /admin/spot/check/qr/{spotID}:
+    $ref: ./path/admin/spot/check/qr.yaml
