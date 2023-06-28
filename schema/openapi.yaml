@@ -21,8 +21,11 @@ paths:
   /admin/event/{eventID}/spot/check/beacon:
     $ref: ./path/admin/event/spot/check/beacon.yaml
 
-  /admin/event/{eventID}/spot/check/qr/{spotID}:
+  /admin/event/{eventID}/spot/{spotID}/check/qr:
     $ref: ./path/admin/event/spot/check/qr.yaml
 
   /admin/event/{eventID}/spot/list:
     $ref: ./path/admin/event/spot/list.yaml
+
+  /admin/event/{eventID}/spot/{spotID}/delete:
+    $ref: ./path/admin/event/spot/delete.yaml
