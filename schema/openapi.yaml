@@ -35,3 +35,6 @@ paths:
 
   /admin/event/create:
     $ref: ./path/admin/event/create.yaml
+
+  /admin/event/{eventID}/update:
+    $ref: ./path/admin/event/update.yaml

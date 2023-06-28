@@ -1,0 +1,23 @@
+put:
+  summary: Update event information
+  description: Update event information
+  operationId: updateEvent
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ~/component/event.yaml#/Event
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ~/component/event.yaml#/Event
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized
