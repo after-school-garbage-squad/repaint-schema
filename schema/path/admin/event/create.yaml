@@ -1,0 +1,23 @@
+post:
+  summary: Create a new event
+  description: Create a new event
+  operationId: createEvent
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ~/component/event.yaml#/Event
+  responses:
+    201:
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: ~/component/event.yaml#/Event
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized
+    409:
+      description: Conflict

@@ -32,3 +32,6 @@ paths:
 
   /admin/event/{eventID}/spot/{spotID}/qr:
     $ref: ./path/admin/event/spot/qr.yaml
+
+  /admin/event/create:
+    $ref: ./path/admin/event/create.yaml
