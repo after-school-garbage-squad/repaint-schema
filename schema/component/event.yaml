@@ -37,7 +37,7 @@ components:
         - phone
       properties:
         name:
-          title:ype: string
+          type: string
           description: Name of the event admin
         email:
           type: string
