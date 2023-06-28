@@ -5,11 +5,15 @@ components:
       required:
         - name
         - beacon_data
+        - qr
       properties:
+        id:
+          $ref: ./id.yaml#/spotID
         name:
           type: string
           description: Name of the spot
         beacon_data:
           $ref: ./beacon.yaml#/Beacon
         qr:
-          $ref: ./id.yaml#/spotID
+          type: boolean
+          description: Whether the spot has a QR code
