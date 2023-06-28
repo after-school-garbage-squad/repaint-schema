@@ -29,3 +29,6 @@ paths:
 
   /admin/event/{eventID}/spot/{spotID}/delete:
     $ref: ./path/admin/event/spot/delete.yaml
+
+  /admin/event/{eventID}/spot/{spotID}/qr:
+    $ref: ./path/admin/event/spot/qr.yaml
