@@ -1,0 +1,17 @@
+post:
+  summary: Register a new spot
+  description: Register a new spot
+  operationId: registerSpot
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ~/component/spot.yaml#/Spot
+  responses:
+    201:
+      description: Created
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized

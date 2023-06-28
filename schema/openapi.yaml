@@ -1,0 +1,19 @@
+openapi: 3.0.1
+
+info:
+  title: Re:paint API
+  description: API for Re:paint
+  version: "1.0.0"
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: http://localhost:3003
+    description: Local server
+
+security: []
+
+paths:
+  /admin/spot/register:
+    $ref: ./path/admin/spot/register.yaml

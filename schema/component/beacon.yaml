@@ -1,0 +1,30 @@
+components:
+  schemas:
+    Beacon:
+      type: object
+      required:
+        - iBeacon
+        - HWID
+        - serviceUUID
+      properties:
+        iBeacon:
+          $ref: "#/iBeacon"
+        HWID:
+          $ref: ./id.yaml#/HWID
+        serviceUUID:
+          $ref: ./id.yaml#/serviceUUID
+    iBeacon:
+      type: object
+      required:
+        - major
+        - minor
+        - uuid
+      properties:
+        major:
+          description: The u16 major that the iBeacon has
+          type: integer
+        minor:
+          description: The u16 minor that the iBeacon has
+          type: integer
+        uuid:
+          $ref: ./id.yaml#/iBeaconID

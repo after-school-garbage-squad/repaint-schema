@@ -1,0 +1,15 @@
+components:
+  schemas:
+    Spot:
+      type: object
+      required:
+        - name
+        - beacon_data
+      properties:
+        name:
+          type: string
+          description: Name of the spot
+        beacon_data:
+          $ref: ./beacon.yaml#/Beacon
+        qr:
+          $ref: ./id.yaml#/spotID

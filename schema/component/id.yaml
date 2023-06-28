@@ -1,0 +1,31 @@
+components:
+  schemas:
+    iBeaconID:
+      description: UUID of u128 that iBeacon has
+      type: integer
+    HWID:
+      description: Hardware ID of u10 held by iBeacon
+      type: integer
+    serviceUUID:
+      description: Bluetooth variable length serviceUUID
+      type: string
+    defaultImageID:
+      description: Default image ID
+      type: string
+    visitorID:
+      description: ID of visitor
+      type: string
+      format: uuid
+    notificationID:
+      desciption: Id for notification
+      type: string
+    imageID:
+      desciption: Id referring to photos taken by participants at the photo spot
+      type: string
+    currentImageID:
+      desciption: Id referring to the current photo
+      type: string
+    spotID:
+      description: ID of spot
+      type: string
+      format: uuid

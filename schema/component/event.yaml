@@ -1,0 +1,45 @@
+components:
+  schemas:
+    Event:
+      type: object
+      required:
+        - url
+        - spots
+        - image_id
+        - name
+        - contact
+      properties:
+        url:
+          type: string
+          description: URL of the event home page
+        spots:
+          type: array
+          description: List of spots data
+          items:
+            $ref: ./spot.yaml#/Spot
+        image_id:
+          type: array
+          description: List of image IDs
+          items:
+            $ref: ./id.yaml#/defaultImageID
+        name:
+          type: string
+          description: Name of the event
+        contact:
+          $ref: "#/Contact"
+    Contact:
+      type: object
+      required:
+        - name
+        - email
+        - phone
+      properties:
+        name:
+          title:ype: string
+          description: Name of the event admin
+        email:
+          type: string
+          description: Email of the event admin
+        phone:
+          type: string
+          description: Phone number of the event admin

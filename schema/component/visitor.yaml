@@ -1,0 +1,21 @@
+components:
+  schemas:
+    Visitor:
+      type: object
+      required:
+        - id
+        - notification_id
+        - pallet_status
+        - current_image_id
+      properties:
+        id:
+          $ref: ./id.yaml#/visitorID
+        notification_id:
+          $ref: ./id.yaml#/notificationID
+        pallet_status:
+          desciption: Status of the pallet (Format will be percent)
+          type: number
+        image_id:
+          $ref: ./id.yaml#/imageID
+        current_image_id:
+          $ref: ./id.yaml#/currentImageID
