@@ -1,0 +1,26 @@
+post:
+  summary: Add a member of the management team to the event
+  description: Add a member of the management team to the event
+  operationId: addOperation
+  parameters:
+    - ref$: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - email
+          properties:
+            email:
+              type: string
+              format: email
+              description: Email address of the user to add to the event
+  responses:
+    204:
+      description: No Content
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized

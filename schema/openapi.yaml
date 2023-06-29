@@ -38,3 +38,6 @@ paths:
 
   /admin/event/{eventID}/update:
     $ref: ./path/admin/event/update.yaml
+
+  /admin/event/{eventID}/add-operation:
+    $ref: ./path/admin/event/add-operation.yaml
