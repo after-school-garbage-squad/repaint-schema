@@ -47,3 +47,6 @@ paths:
 
   /admin/event/{eventID}/notification:
     $ref: ./path/admin/event/notification.yaml
+
+  /admin/event/{eventID}/delete:
+    $ref: ./path/admin/event/delete.yaml

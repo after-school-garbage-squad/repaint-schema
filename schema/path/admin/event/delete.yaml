@@ -1,0 +1,13 @@
+delete:
+  summary: Delete event
+  description: Delete event by event id
+  operationId: deleteEvent
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  responses:
+    204:
+      description: No Content
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized
