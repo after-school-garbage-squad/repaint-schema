@@ -44,3 +44,6 @@ paths:
 
   /admin/event/{eventID}/qr:
     $ref: ./path/admin/event/qr.yaml
+
+  /admin/event/{eventID}/notification:
+    $ref: ./path/admin/event/notification.yaml
