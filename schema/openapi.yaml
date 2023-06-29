@@ -41,3 +41,6 @@ paths:
 
   /admin/event/{eventID}/add-operation:
     $ref: ./path/admin/event/add-operation.yaml
+
+  /admin/event/{eventID}/qr:
+    $ref: ./path/admin/event/qr.yaml
