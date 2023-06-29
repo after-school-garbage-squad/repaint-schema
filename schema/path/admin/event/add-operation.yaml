@@ -3,7 +3,7 @@ post:
   description: Add a member of the management team to the event
   operationId: addOperation
   parameters:
-    - ref$: ~/parameter/path.yaml#/eventID
+    - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
     required: true
     content:
