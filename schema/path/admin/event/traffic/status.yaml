@@ -3,7 +3,7 @@ get:
   description: Get traffic status by event id
   operationId: getTrafficStatus
   parameters:
-    - $ref: "~/parameters/path.yaml#/eventID"
+    - $ref: ~/parameters/path.yaml#/eventID
   responses:
     200:
       description: OK
@@ -12,7 +12,7 @@ get:
           schema:
             type: array
             items:
-              $ref: "~/component/spot.yaml#/TrafficStatus"
+              $ref: ~/component/spot.yaml#/TrafficStatus
     400:
       description: Bad Request
     401:

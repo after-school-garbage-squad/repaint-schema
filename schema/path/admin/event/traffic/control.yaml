@@ -3,7 +3,7 @@ post:
   description: Control traffic by event id
   operationId: controlTraffic
   parameters:
-    - $ref: "~/parameters/path.yaml#/eventID"
+    - $ref: ~/parameters/path.yaml#/eventID
   requestBody:
     required: true
     content:
