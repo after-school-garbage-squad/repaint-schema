@@ -18,14 +18,14 @@ components:
       type: string
       format: uuid
     notificationID:
-      desciption: Id for notification
+      description: Id for notification
       type: string
     imageID:
-      desciption: Id referring to photos taken by participants at the photo spot
+      description: Id referring to photos taken by participants at the photo spot
       type: string
       format: uuid
     currentImageID:
-      desciption: Id referring to the current photo
+      description: Id referring to the current photo
       type: string
       format: uuid
     spotID:

@@ -3,8 +3,8 @@ get:
   description: Check visitor is exist in event
   operationId: checkVisitor
   parameters:
-    - $ref: ~/component/id.yaml#/eventID
-    - $ref: ~/component/id.yaml#/visitorID
+    - $ref: ~/parameter/path.yaml#/eventID
+    - $ref: ~/parameter/path.yaml#/visitorID
   responses:
     200:
       description: OK

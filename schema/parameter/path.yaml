@@ -14,3 +14,10 @@ components:
       required: true
       schema:
         $ref: ~/component/id.yaml#/eventID
+    visitorID:
+      in: path
+      name: visitorID
+      description: ID of visitor
+      required: true
+      schema:
+        $ref: ~/component/id.yaml#/visitorID

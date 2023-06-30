@@ -13,7 +13,7 @@ components:
         notification_id:
           $ref: ./id.yaml#/notificationID
         pallet_status:
-          desciption: Status of the pallet (Format will be percent)
+          description: Status of the pallet (Format will be percent)
           type: number
         image_id:
           $ref: ./id.yaml#/imageID
