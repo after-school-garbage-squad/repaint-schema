@@ -17,3 +17,11 @@ components:
         qr:
           type: boolean
           description: Whether the spot has a QR code
+    TrafficStatus:
+      type: object
+      properties:
+        id:
+          $ref: ./id.yaml#/spotID
+        hc:
+          type: integer
+          description: Number of people

@@ -50,3 +50,6 @@ paths:
 
   /admin/event/{eventID}/delete:
     $ref: ./path/admin/event/delete.yaml
+
+  /admin/event/{eventID}/traffic/status:
+    $ref: ./path/admin/event/traffic/status.yaml
