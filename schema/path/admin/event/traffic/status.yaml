@@ -3,7 +3,7 @@ get:
   description: Get traffic status by event id
   operationId: getTrafficStatus
   parameters:
-    - $ref: ~/parameters/path.yaml#/eventID
+    - $ref: ~/parameter/path.yaml#/eventID
   responses:
     200:
       description: OK
