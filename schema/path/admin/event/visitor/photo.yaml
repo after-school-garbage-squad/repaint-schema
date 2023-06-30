@@ -1,0 +1,23 @@
+post:
+  summary: Upload visitor photo
+  description: Upload visitor photo
+  operationId: uploadVisitorPhoto
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+    - $ref: ~/parameter/path.yaml#/visitorID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            imageID:
+              $ref: ~/component/id.yaml#/imageID
+  responses:
+    204:
+      description: No Content
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized
