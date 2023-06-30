@@ -77,3 +77,6 @@ paths:
 
   /visitor/{visitorID}/event/{eventID}/delete:
     $ref: ./path/visitor/event/delete.yaml
+
+  /visitor/{visitorID}/event/{eventID}/image/list:
+    $ref: ./path/visitor/event/image/list.yaml
