@@ -9,10 +9,6 @@ components:
     serviceUUID:
       description: Bluetooth variable length serviceUUID
       type: string
-    defaultImageID:
-      description: Default image ID
-      type: string
-      format: uuid
     visitorID:
       description: ID of visitor
       type: string
@@ -22,10 +18,6 @@ components:
       type: string
     imageID:
       description: Id referring to photos taken by participants at the photo spot
-      type: string
-      format: uuid
-    currentImageID:
-      description: Id referring to the current photo
       type: string
       format: uuid
     spotID:

@@ -23,7 +23,7 @@ components:
           type: array
           description: List of image IDs
           items:
-            $ref: ./id.yaml#/defaultImageID
+            $ref: ./id.yaml#/imageID
         name:
           type: string
           description: Name of the event
