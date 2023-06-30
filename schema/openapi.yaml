@@ -53,3 +53,6 @@ paths:
 
   /admin/event/{eventID}/traffic/status:
     $ref: ./path/admin/event/traffic/status.yaml
+
+  /admin/event/{eventID}/traffic/control:
+    $ref: ./path/admin/event/traffic/control.yaml
