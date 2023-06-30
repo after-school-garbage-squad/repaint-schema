@@ -1,0 +1,12 @@
+put:
+  summary: Request a notification change
+  description: Request a notification change
+  operationId: changeNotification
+  parameters:
+    - $ref: ~/parameter/path.yaml#/visitorID
+    - $ref: ~/parameter/path.yaml#/eventID
+  responses:
+    204:
+      description: No Content
+    400:
+      description: Bad Request
