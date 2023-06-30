@@ -22,6 +22,6 @@
     "format": "pnpm _format -w",
     "doc": "pnpm run expand && concurrently 'npm:expand watch' 'npm:_doc'",
     "findOrphan": "tsx ./script/bin/findOrphan.ts",
-    "lint": "pnpm run expand && redocly lint expanded/openapi.yaml"
+    "lint": "pnpm run expand && pnpm run findOrphan && redocly lint expanded/openapi.yaml"
   }
 }
