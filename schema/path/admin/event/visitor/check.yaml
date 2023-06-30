@@ -1,0 +1,18 @@
+get:
+  summary: Check visitor is exist in event
+  description: Check visitor is exist in event
+  operationId: checkVisitor
+  parameters:
+    - $ref: ~/component/id.yaml#/eventID
+    - $ref: ~/component/id.yaml#/visitorID
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ~/component/visitor.yaml#/Visitor
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized

@@ -56,3 +56,6 @@ paths:
 
   /admin/event/{eventID}/traffic/control:
     $ref: ./path/admin/event/traffic/control.yaml
+
+  /admin/event/{eventID}/visitor/{visitorID}/check:
+    $ref: ./path/admin/event/visitor/check.yaml
