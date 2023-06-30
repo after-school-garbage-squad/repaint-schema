@@ -1,0 +1,23 @@
+post:
+  summary: Set images to be displayed in the application
+  description: Set images to be displayed in the application
+  operationId: setImage
+  parameters:
+    - $ref: ~/parameter/path.yaml#/visitorID
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - image
+          properties:
+            image:
+              $ref: ~/component/id.yaml#/imageID
+  responses:
+    201:
+      description: Created
+    400:
+      description: Bad Request

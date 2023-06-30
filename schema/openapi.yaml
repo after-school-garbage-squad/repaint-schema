@@ -80,3 +80,6 @@ paths:
 
   /visitor/{visitorID}/event/{eventID}/image/list:
     $ref: ./path/visitor/event/image/list.yaml
+
+  /visitor/{visitorID}/event/{eventID}/image/set:
+    $ref: ./path/visitor/event/image/set.yaml
