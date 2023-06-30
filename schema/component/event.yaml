@@ -4,7 +4,7 @@ components:
       type: object
       required:
         - url
-        - spots
+        - beacons
         - image_id
         - name
         - contact
@@ -14,11 +14,11 @@ components:
         url:
           type: string
           description: URL of the event home page
-        spots:
+        beacons:
           type: array
-          description: List of spots data
+          description: List of beacon data
           items:
-            $ref: ./spot.yaml#/Spot
+            $ref: ./beacon.yaml#/Beacon
         image_id:
           type: array
           description: List of image IDs
