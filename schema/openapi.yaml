@@ -59,3 +59,6 @@ paths:
 
   /admin/event/{eventID}/visitor/{visitorID}/check:
     $ref: ./path/admin/event/visitor/check.yaml
+
+  /visitor/event/join:
+    $ref: ./path/visitor/event/join.yaml
