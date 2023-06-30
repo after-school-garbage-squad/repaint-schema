@@ -65,3 +65,6 @@ paths:
 
   /visitor/event/join:
     $ref: ./path/visitor/event/join.yaml
+
+  /visitor/{visitorID}/event/{eventID}/startup:
+    $ref: ./path/visitor/event/startup.yaml
