@@ -74,3 +74,6 @@ paths:
 
   /visitor/{visitorID}/event/{eventID}/notification:
     $ref: ./path/visitor/event/notification.yaml
+
+  /visitor/{visitorID}/event/{eventID}/delete:
+    $ref: ./path/visitor/event/delete.yaml

@@ -1,0 +1,12 @@
+delete:
+  summary: Delete visitor data from event
+  description: Delete visitor data from event
+  operationId: deleteVisitor
+  parameters:
+    - $ref: ~/parameter/path.yaml#/visitorID
+    - $ref: ~/parameter/path.yaml#/eventID
+  responses:
+    204:
+      description: No Content
+    400:
+      description: Bad Request
