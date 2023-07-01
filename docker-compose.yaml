@@ -3,6 +3,6 @@ services:
     image: redocly/openapi-cli:v1.0.0-beta.114
     ports:
       - "8080:8080"
-    command: preview-docs /mnt/expanded/openapi.yaml --use-community-edition
+    command: preview-docs /mnt/expanded/openapi.yaml --use-community-edition --host=0.0.0.0
     volumes:
       - ".:/mnt"
