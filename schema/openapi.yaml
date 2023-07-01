@@ -89,3 +89,6 @@ paths:
 
   /visitor/{visitorID}/event/{eventID}/spot/drop:
     $ref: ./path/visitor/event/spot/drop.yaml
+
+  /visitor/{visitorID}/event/{eventID}/spot/pick:
+    $ref: ./path/visitor/event/spot/pick.yaml

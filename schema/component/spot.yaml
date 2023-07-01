@@ -5,7 +5,6 @@ components:
       required:
         - name
         - beacon_data
-        - qr
       properties:
         id:
           $ref: ./id.yaml#/spotID
@@ -15,10 +14,12 @@ components:
         beacon_data:
           $ref: ./beacon.yaml#/Beacon
         qr:
-          type: boolean
-          description: Whether the spot has a QR code
+          $ref: ./id.yaml#/pickQRID
     TrafficStatus:
       type: object
+      required:
+        - id
+        - status
       properties:
         id:
           $ref: ./id.yaml#/spotID

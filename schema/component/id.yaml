@@ -28,3 +28,7 @@ components:
       description: ID of event
       type: string
       format: uuid
+    pickQRID:
+      description: ID of QR code for pick palette
+      type: string
+      format: uuid
