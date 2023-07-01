@@ -1,0 +1,30 @@
+get:
+  summary: Get the currently selected image
+  description: Get the currently selected image
+  operationId: getCurrentImage
+  parameters:
+    - $ref: ~/parameter/path.yaml#/visitorID
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - image
+          properties:
+            image:
+              $ref: ~/component/id.yaml#/imageID
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              image:
+                $ref: ~/component/id.yaml#/imageID
+    400:
+      description: Bad Request

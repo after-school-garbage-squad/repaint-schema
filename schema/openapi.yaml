@@ -83,3 +83,6 @@ paths:
 
   /visitor/{visitorID}/event/{eventID}/image/set:
     $ref: ./path/visitor/event/image/set.yaml
+
+  /visitor/{visitorID}/event/{eventID}/image/current:
+    $ref: ./path/visitor/event/image/current.yaml
