@@ -1,0 +1,23 @@
+name: github pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: re-taro/actions/setup-node@v1.0.0
+        with:
+          node-version-file: .tool-versions
+      - name: bundle
+        run: |
+          pnpm bundle
+      - name: pages deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs

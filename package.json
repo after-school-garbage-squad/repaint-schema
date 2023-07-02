@@ -21,6 +21,7 @@
     "_doc": "redocly preview-docs expanded/openapi.yaml --use-community-edition",
     "format": "pnpm _format -w",
     "doc": "pnpm run expand && concurrently 'npm:expand watch' 'npm:_doc'",
+    "bundle": "pnpm run expand && redocly build-docs expanded/openapi.yaml --output bundled/index.html",
     "findOrphan": "tsx ./script/bin/findOrphan.ts",
     "lint": "pnpm run expand && pnpm run findOrphan && redocly lint expanded/openapi.yaml"
   }
