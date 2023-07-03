@@ -1,7 +1,7 @@
 post:
-  summary: Set images to be displayed in the application
-  description: Set images to be displayed in the application
-  operationId: setImage
+  summary: Select images to be displayed in the application
+  description: Select images to be displayed in the application
+  operationId: selectImage
   parameters:
     - $ref: ~/parameter/path.yaml#/visitorID
     - $ref: ~/parameter/path.yaml#/eventID
