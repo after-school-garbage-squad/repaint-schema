@@ -8,12 +8,10 @@ post:
   requestBody:
     required: true
     content:
-      application/json:
+      image/png:
         schema:
-          type: object
-          properties:
-            imageID:
-              $ref: ~/component/id.yaml#/imageID
+          type: string
+          format: binary
   responses:
     204:
       description: No Content
