@@ -6,4 +6,4 @@ components:
       description: ID of QR code
       required: true
       schema:
-        $ref: ~/component/id.yaml#/qrID
+        $ref: ~/component/id.yaml#/pickQRID

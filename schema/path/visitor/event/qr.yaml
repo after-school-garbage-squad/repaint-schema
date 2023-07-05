@@ -1,9 +1,10 @@
 get:
-  summary: Request QR code for joining the event
-  description: Request QR code for joining the event
+  summary: Request QR code to be presented when taking a photo
+  description: Request QR code to be presented when taking a photo
   operationId: getJoinEventQR
   parameters:
     - $ref: ~/parameter/path.yaml#/visitorID
+    - $ref: ~/parameter/path.yaml#/eventID
   responses:
     200:
       description: OK
