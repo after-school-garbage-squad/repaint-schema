@@ -4,7 +4,6 @@ components:
       type: object
       required:
         - iBeacon
-        - HWID
         - serviceUUID
       properties:
         iBeacon:

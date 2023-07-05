@@ -21,7 +21,7 @@ paths:
   /admin/event/{eventID}/spot/check/beacon:
     $ref: ./path/admin/event/spot/check/beacon.yaml
 
-  /admin/event/{eventID}/spot/{spotID}/check/qr:
+  /admin/event/{eventID}/spot/check/qr:
     $ref: ./path/admin/event/spot/check/qr.yaml
 
   /admin/event/{eventID}/spot/list:
@@ -36,11 +36,14 @@ paths:
   /admin/event/create:
     $ref: ./path/admin/event/create.yaml
 
+  /admin/event/{eventID}/list:
+    $ref: ./path/admin/event/list.yaml
+
   /admin/event/{eventID}/update:
     $ref: ./path/admin/event/update.yaml
 
-  /admin/event/{eventID}/add-operation:
-    $ref: ./path/admin/event/add-operation.yaml
+  /admin/event/{eventID}/add-operator:
+    $ref: ./path/admin/event/add-operator.yaml
 
   /admin/event/{eventID}/qr:
     $ref: ./path/admin/event/qr.yaml
@@ -66,7 +69,7 @@ paths:
   /visitor/event/join:
     $ref: ./path/visitor/event/join.yaml
 
-  /visitor/{visitorID}/event/qr:
+  /visitor/{visitorID}/event/{eventID}/qr:
     $ref: ./path/visitor/event/qr.yaml
 
   /visitor/{visitorID}/event/{eventID}/startup:
@@ -81,8 +84,8 @@ paths:
   /visitor/{visitorID}/event/{eventID}/image/list:
     $ref: ./path/visitor/event/image/list.yaml
 
-  /visitor/{visitorID}/event/{eventID}/image/set:
-    $ref: ./path/visitor/event/image/set.yaml
+  /visitor/{visitorID}/event/{eventID}/image/select:
+    $ref: ./path/visitor/event/image/select.yaml
 
   /visitor/{visitorID}/event/{eventID}/image/current:
     $ref: ./path/visitor/event/image/current.yaml

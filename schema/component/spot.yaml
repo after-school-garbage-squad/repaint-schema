@@ -26,3 +26,14 @@ components:
         hc:
           type: integer
           description: Number of people
+    RegisterSpot:
+      type: object
+      required:
+        - name
+        - beacon_data
+      properties:
+        name:
+          type: string
+          description: Name of the spot
+        beacon_data:
+          $ref: ./beacon.yaml#/Beacon

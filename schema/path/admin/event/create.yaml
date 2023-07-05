@@ -7,7 +7,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ~/component/event.yaml#/Event
+          $ref: ~/component/event.yaml#/CreateEvent
   responses:
     201:
       description: Created

@@ -9,7 +9,7 @@ put:
     content:
       application/json:
         schema:
-          $ref: ~/component/event.yaml#/Event
+          $ref: ~/component/event.yaml#/UpdateEvent
   responses:
     200:
       description: OK

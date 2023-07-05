@@ -4,7 +4,7 @@ get:
   operationId: checkSpotByQRCode
   parameters:
     - $ref: ~/parameter/path.yaml#/eventID
-    - $ref: ~/parameter/path.yaml#/spotID
+    - $ref: ~/parameter/query.yaml#/qrID
   responses:
     200:
       description: OK

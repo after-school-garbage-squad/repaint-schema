@@ -9,7 +9,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ~/component/spot.yaml#/Spot
+          $ref: ~/component/spot.yaml#/RegisterSpot
   responses:
     201:
       description: Created
