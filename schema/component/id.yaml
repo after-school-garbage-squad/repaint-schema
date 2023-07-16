@@ -32,3 +32,7 @@ components:
       description: ID of QR code for pick palette
       type: string
       format: uuid
+    adminID:
+      description: ID of admin
+      type: string
+      format: uuid

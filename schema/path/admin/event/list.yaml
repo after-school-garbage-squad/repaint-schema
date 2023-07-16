@@ -4,6 +4,7 @@ get:
   operationId: eventList
   parameters:
     - $ref: ~/parameter/path.yaml#/eventID
+    - $ref: ~/parameter/path.yaml#/adminID
   responses:
     200:
       description: OK
