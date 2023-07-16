@@ -21,3 +21,10 @@ components:
       required: true
       schema:
         $ref: ~/component/id.yaml#/visitorID
+    adminID:
+      in: path
+      name: adminID
+      description: ID of admin
+      required: true
+      schema:
+        $ref: ~/component/id.yaml#/adminID

@@ -3,6 +3,7 @@ get:
   description: Get list of event
   operationId: eventList
   parameters:
+    - $ref: ~/parameter/path.yaml#/adminID
     - $ref: ~/parameter/path.yaml#/eventID
   responses:
     200:
