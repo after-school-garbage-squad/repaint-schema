@@ -1,0 +1,47 @@
+components:
+  schemas:
+    Contact:
+      type: object
+      required:
+        - name
+        - email
+        - phone
+      properties:
+        name:
+          type: string
+          description: イベントの責任者の名前
+        email:
+          type: string
+          format: email
+          description: イベントの責任者のメールアドレス
+        phone:
+          type: string
+          description: イベントの責任者の電話番号
+    Event:
+      type: object
+      required:
+        - eventId
+        - name
+        - hpUrl
+        - contact
+        - spots
+        - images
+      properties:
+        eventId:
+          $ref: "~/component/id.yaml#/eventID"
+        name:
+          type: string
+          description: イベント名
+        hpUrl:
+          type: string
+          description: イベントのホームページのURL
+        contact:
+          $ref: "~/component/event.yaml#/Contact"
+        spots:
+          type: array
+          items:
+            $ref: "~/component/spot.yaml#/Spot"
+        images:
+          type: array
+          items:
+            $ref: "~/component/id.yaml#/eventImageID"

@@ -1,0 +1,52 @@
+post:
+  summary: イベントを作成する
+  description: イベントを作成する
+  operationId: createEvent
+  security:
+    - bearerAuth: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - name
+            - hpUrl
+            - contact
+          properties:
+            name:
+              type: string
+              description: イベント名
+            hpUrl:
+              type: string
+              description: イベントのホームページのURL
+            contact:
+              $ref: ~/component/event.yaml#/Contact
+  responses:
+    201:
+      description: Created
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - eventId
+              - name
+              - hpUrl
+              - contact
+            properties:
+              eventId:
+                $ref: "~/component/id.yaml#/eventID"
+              name:
+                type: string
+                description: イベント名
+              hpUrl:
+                type: string
+                description: イベントのホームページのURL
+              contact:
+                $ref: "~/component/event.yaml#/Contact"
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized

@@ -1,0 +1,19 @@
+get:
+  summary: 管理者に紐づくイベントの一覧を取得する
+  description: 管理者に紐づくイベントの一覧を取得する
+  operationId: getEvents
+  security:
+    - bearerAuth: []
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "~/component/event.yaml#/Event"
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized

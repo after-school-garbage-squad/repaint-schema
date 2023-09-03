@@ -26,3 +26,11 @@ paths:
     $ref: ./path/admin/event/send-email.yaml
   /admin/add-operator:
     $ref: ./path/admin/add-operator.yaml
+  /admin/event/create:
+    $ref: ./path/admin/event/create.yaml
+  /admin/event/{eventID}/delete:
+    $ref: ./path/admin/event/delete.yaml
+  /admin/event/list:
+    $ref: ./path/admin/event/list.yaml
+  /admin/event/{eventID}/update:
+    $ref: ./path/admin/event/update.yaml

@@ -1,0 +1,15 @@
+delete:
+  summary: イベントを削除する
+  description: イベントを削除する
+  operationId: deleteEvent
+  security:
+    - bearerAuth: []
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  responses:
+    204:
+      description: No Content
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized

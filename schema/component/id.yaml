@@ -3,3 +3,9 @@ components:
     eventID:
       description: イベントのパブリックID(ulid)
       type: string
+    eventImageID:
+      description: イベントのデフォルト画像のID(ulid)
+      type: string
+    spotID:
+      description: スポットのパブリックID(ulid)
+      type: string
