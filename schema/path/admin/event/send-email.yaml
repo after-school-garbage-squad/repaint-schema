@@ -1,7 +1,9 @@
 post:
-  summary: Add a member of the management team to the event
-  description: Add a member of the management team to the event
-  operationId: addOperation
+  summary: イベントの管理者を追加するためのメールを送信する
+  description: イベントの管理者を追加するためのメールを送信する
+  operationId: sendEmail
+  security:
+    - bearerAuth: []
   parameters:
     - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
@@ -16,7 +18,7 @@ post:
             email:
               type: string
               format: email
-              description: Email address of the user to add to the event
+              description: 追加する管理者のメールアドレス
   responses:
     204:
       description: No Content

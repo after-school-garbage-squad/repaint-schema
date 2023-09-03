@@ -1,0 +1,23 @@
+post:
+  summary: 管理者を作成し、システムに登録する
+  description: 管理者を作成し、システムに登録する
+  operationId: register
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - subject
+          properties:
+            subject:
+              type: string
+              description: Auth0のuser profileのuser_id
+  responses:
+    204:
+      description: No Content
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized

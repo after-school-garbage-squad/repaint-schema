@@ -1,0 +1,25 @@
+post:
+  summary: イベントの管理者を追加する
+  description: イベントの管理者を追加する
+  operationId: addOperation
+  security:
+    - bearerAuth: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - token
+          properties:
+            token:
+              type: string
+              description: emailに添付されているURLの末尾にクエリパラメータとして付与されているtoken
+  responses:
+    204:
+      description: No Content
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized
