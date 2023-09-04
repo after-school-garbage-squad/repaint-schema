@@ -2,6 +2,8 @@ post:
   summary: 管理者を作成し、システムに登録する
   description: 管理者を作成し、システムに登録する
   operationId: register
+  tags:
+    - auth
   requestBody:
     required: true
     content:

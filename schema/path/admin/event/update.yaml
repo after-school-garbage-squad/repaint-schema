@@ -2,6 +2,8 @@ put:
   summary: イベントを更新する
   description: イベントを更新する
   operationId: updateEvent
+  tags:
+    - admin
   security:
     - bearerAuth: []
   parameters:

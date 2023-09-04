@@ -1,0 +1,29 @@
+post:
+  summary: 参加者の画像を設定する
+  description: 参加者の画像を設定する
+  operationId: setCurrentImage
+  tags:
+    - visitor
+  parameters:
+    - $ref: ~/parameter/path.yaml#/visitorID
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      multipart/form-data:
+        schema:
+          type: object
+          required:
+            - image
+          properties:
+            image:
+              description: 画像ファイル
+              type: string
+              format: binary
+  responses:
+    204:
+      description: No Content
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized

@@ -1,0 +1,27 @@
+get:
+  summary: 参加者が現在設定している写真を取得する
+  description: 参加者が現在設定している写真を取得する
+  operationId: getCurrentImage
+  tags:
+    - visitor
+  parameters:
+    - $ref: ~/parameter/path.yaml#/visitorID
+    - $ref: ~/parameter/path.yaml#/eventID
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - imageId
+            properties:
+              imageId:
+                $ref: ~/component/id.yaml#/currentImageID
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized
+    404:
+      description: Not Found

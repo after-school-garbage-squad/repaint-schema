@@ -1,11 +1,13 @@
 post:
-  summary: イベントの管理者を追加する
-  description: イベントの管理者を追加する
-  operationId: addOperation
+  summary: デフォルトで登録される画像を設定する
+  description: デフォルトで登録される画像を設定する
+  operationId: registerDefaultImage
   tags:
     - admin
   security:
     - bearerAuth: []
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
     required: true
     content:
@@ -13,11 +15,10 @@ post:
         schema:
           type: object
           required:
-            - token
+            - imageId
           properties:
-            token:
-              type: string
-              description: emailに添付されているURLの末尾にクエリパラメータとして付与されているtoken
+            imageId:
+              $ref: ~/component/id.yaml#/eventImageID
   responses:
     204:
       description: No Content

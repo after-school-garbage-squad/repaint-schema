@@ -6,6 +6,15 @@ components:
     eventImageID:
       description: イベントのデフォルト画像のID(ulid)
       type: string
+    visitorImageID:
+      description: 参加者が撮影した画像のID(ulid)
+      type: string
+    currentImageID:
+      description: 参加者が現在設定している画像のID(ulid)
+      type: string
     spotID:
       description: スポットのパブリックID(ulid)
+      type: string
+    visitorID:
+      description: 参加者のパブリックID(ulid)
       type: string

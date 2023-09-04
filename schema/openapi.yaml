@@ -12,6 +12,14 @@ servers:
   - url: http://localhost:3003
     description: Local server
 
+tags:
+  - name: admin
+    description: API for administrators
+  - name: visitor
+    description: API for visitors
+  - name: auth
+    description: API for authentication
+
 components:
   securitySchemes:
     bearerAuth:
@@ -36,3 +44,17 @@ paths:
     $ref: ./path/admin/event/list.yaml
   /admin/event/{eventID}/update:
     $ref: ./path/admin/event/update.yaml
+  /admin/event/{eventID}/image/register-default:
+    $ref: ./path/admin/event/image/register-default.yaml
+  /admin/event/{eventID}/image/delete-default:
+    $ref: ./path/admin/event/image/delete-default.yaml
+  /admin/event/{eventID}/image/check-visitor:
+    $ref: ./path/admin/event/image/check-visitor.yaml
+  /admin/event/{eventID}/image/upload-visitor:
+    $ref: ./path/admin/event/image/upload-visitor.yaml
+  /visitor/{visitorID}/event/{eventID}/image/list:
+    $ref: ./path/visitor/event/image/list.yaml
+  /visitor/{visitorID}/event/{eventID}/image/get-current:
+    $ref: ./path/visitor/event/image/get-current.yaml
+  /visitor/{visitorID}/event/{eventID}/image/set-current:
+    $ref: ./path/visitor/event/image/set-current.yaml

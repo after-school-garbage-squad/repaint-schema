@@ -1,7 +1,7 @@
 post:
-  summary: イベントの管理者を追加するためのメールを送信する
-  description: イベントの管理者を追加するためのメールを送信する
-  operationId: sendEmail
+  summary: 参加者を撮影した画像を登録する
+  description: 参加者を撮影した画像を登録する
+  operationId: uploadVisitorImage
   tags:
     - admin
   security:
@@ -11,16 +11,16 @@ post:
   requestBody:
     required: true
     content:
-      application/json:
+      multipart/form-data:
         schema:
           type: object
           required:
-            - email
+            - image
           properties:
-            email:
+            image:
+              description: 画像ファイル
               type: string
-              format: email
-              description: 追加する管理者のメールアドレス
+              format: binary
   responses:
     204:
       description: No Content

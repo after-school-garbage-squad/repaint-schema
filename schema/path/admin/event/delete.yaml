@@ -2,6 +2,8 @@ delete:
   summary: イベントを削除する
   description: イベントを削除する
   operationId: deleteEvent
+  tags:
+    - admin
   security:
     - bearerAuth: []
   parameters:

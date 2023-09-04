@@ -2,6 +2,8 @@ get:
   summary: 管理者に紐づくイベントの一覧を取得する
   description: 管理者に紐づくイベントの一覧を取得する
   operationId: getEvents
+  tags:
+    - admin
   security:
     - bearerAuth: []
   responses:
@@ -17,3 +19,5 @@ get:
       description: Bad Request
     401:
       description: Unauthorized
+    404:
+      description: Not Found

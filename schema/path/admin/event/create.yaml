@@ -2,6 +2,8 @@ post:
   summary: イベントを作成する
   description: イベントを作成する
   operationId: createEvent
+  tags:
+    - admin
   security:
     - bearerAuth: []
   requestBody:

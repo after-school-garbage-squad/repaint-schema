@@ -7,3 +7,10 @@ components:
       required: true
       schema:
         $ref: ~/component/id.yaml#/eventID
+    visitorID:
+      in: path
+      name: visitorID
+      description: 参加者のパブリックID
+      required: true
+      schema:
+        $ref: ~/component/id.yaml#/visitorID

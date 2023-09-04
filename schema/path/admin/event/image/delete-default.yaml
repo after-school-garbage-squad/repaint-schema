@@ -1,7 +1,7 @@
-post:
-  summary: イベントの管理者を追加するためのメールを送信する
-  description: イベントの管理者を追加するためのメールを送信する
-  operationId: sendEmail
+delete:
+  summary: デフォルトで登録されている画像を削除する
+  description: デフォルトで登録されている画像を削除する
+  operationId: deleteDefaultImage
   tags:
     - admin
   security:
@@ -15,12 +15,10 @@ post:
         schema:
           type: object
           required:
-            - email
+            - imageId
           properties:
-            email:
-              type: string
-              format: email
-              description: 追加する管理者のメールアドレス
+            imageId:
+              $ref: ~/component/id.yaml#/eventImageID
   responses:
     204:
       description: No Content
