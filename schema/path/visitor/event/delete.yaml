@@ -1,0 +1,14 @@
+delete:
+  summary: delete visitor
+  description: 参加者を削除する
+  operationId: deleteVisitor
+  tags:
+    - visitor
+  parameters:
+    - $ref: ~/parameter/path.yaml#/visitorID
+    - $ref: ~/parameter/path.yaml#/eventID
+  responses:
+    204:
+      description: No Content
+    400:
+      description: Bad Request

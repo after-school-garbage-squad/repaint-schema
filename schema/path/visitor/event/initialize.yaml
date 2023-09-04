@@ -1,0 +1,37 @@
+patch:
+  summary: initialize visitor(Second and subsequent startups)
+  description: 参加者を初期化する(二回目以降の起動時)
+  operationId: initializeVisitor
+  tags:
+    - visitor
+  parameters:
+    - $ref: ~/parameter/path.yaml#/visitorID
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - registrationId
+          properties:
+            registrationId:
+              $ref: ~/component/id.yaml#/registrationId
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - visitor
+              - event
+            properties:
+              visitor:
+                $ref: ~/component/visitor.yaml#/Visitor
+              event:
+                $ref: ~/component/event.yaml#/Event
+    400:
+      description: Bad Request

@@ -33,23 +33,7 @@ patch:
       content:
         application/json:
           schema:
-            type: object
-            required:
-              - eventId
-              - name
-              - hpUrl
-              - contact
-            properties:
-              eventId:
-                $ref: ~/component/id.yaml#/eventID
-              name:
-                type: string
-                description: イベント名
-              hpUrl:
-                type: string
-                description: イベントのホームページのURL
-              contact:
-                $ref: ~/component/event.yaml#/Contact
+            $ref: ~/component/event.yaml#/UpdateEvent
     400:
       description: Bad Request
     401:

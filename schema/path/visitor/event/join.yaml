@@ -1,0 +1,36 @@
+post:
+  summary: join event
+  description: イベントに参加する
+  operationId: joinEvent
+  tags:
+    - visitor
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - registrationId
+          properties:
+            registrationId:
+              $ref: ~/component/id.yaml#/registrationId
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - visitor
+              - event
+            properties:
+              visitor:
+                $ref: ~/component/visitor.yaml#/RegisterVisitor
+              event:
+                $ref: ~/component/event.yaml#/Event
+    400:
+      description: Bad Request

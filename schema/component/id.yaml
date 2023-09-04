@@ -18,3 +18,6 @@ components:
     visitorID:
       description: 参加者のパブリックID(ulid)
       type: string
+    registrationId:
+      type: string
+      description: スマホのプッシュ通知用のID

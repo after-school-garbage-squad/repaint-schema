@@ -1,6 +1,7 @@
 components:
   schemas:
     Spot:
+      description: スポット
       type: object
       required:
         - spotId
@@ -31,6 +32,7 @@ components:
           type: string
           description: ビーコンのサービスUUID
     IBeacon:
+      description: iBeaconの情報
       type: object
       required:
         - major

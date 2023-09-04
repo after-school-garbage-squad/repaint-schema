@@ -1,23 +1,7 @@
 components:
   schemas:
-    Contact:
-      type: object
-      required:
-        - name
-        - email
-        - phone
-      properties:
-        name:
-          type: string
-          description: イベントの責任者の名前
-        email:
-          type: string
-          format: email
-          description: イベントの責任者のメールアドレス
-        phone:
-          type: string
-          description: イベントの責任者の電話番号
     Event:
+      description: イベント
       type: object
       required:
         - eventId
@@ -45,3 +29,59 @@ components:
           type: array
           items:
             $ref: ~/component/id.yaml#/eventImageID
+    CreateEvent:
+      description: イベント作成時のレスポンス
+      type: object
+      required:
+        - eventId
+        - name
+        - hpUrl
+        - contact
+      properties:
+        eventId:
+          $ref: ~/component/id.yaml#/eventID
+        name:
+          type: string
+          description: イベント名
+        hpUrl:
+          type: string
+          description: イベントのホームページのURL
+        contact:
+          $ref: ~/component/event.yaml#/Contact
+    UpdateEvent:
+      description: イベント更新時のレスポンス
+      type: object
+      required:
+        - eventId
+        - name
+        - hpUrl
+        - contact
+      properties:
+        eventId:
+          $ref: ~/component/id.yaml#/eventID
+        name:
+          type: string
+          description: イベント名
+        hpUrl:
+          type: string
+          description: イベントのホームページのURL
+        contact:
+          $ref: ~/component/event.yaml#/Contact
+    Contact:
+      description: イベントの責任者情報
+      type: object
+      required:
+        - name
+        - email
+        - phone
+      properties:
+        name:
+          type: string
+          description: イベントの責任者の名前
+        email:
+          type: string
+          format: email
+          description: イベントの責任者のメールアドレス
+        phone:
+          type: string
+          description: イベントの責任者の電話番号
