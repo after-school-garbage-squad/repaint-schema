@@ -1,0 +1,23 @@
+get:
+  summary: get traffic status
+  description: イベントの人流を取得する
+  operationId: getTrafficStatus
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ~/component/traffic.yaml#/TrafficStatus
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized

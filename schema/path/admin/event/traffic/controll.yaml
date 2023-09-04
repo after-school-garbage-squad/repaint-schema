@@ -1,0 +1,33 @@
+post:
+  summary: controll traffic
+  description: 人流を制御する
+  operationId: controllTraffic
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - form
+            - to
+          properties:
+            from:
+              description: 過密なスポット
+              $ref: ~/component/id.yaml#/spotID
+            to:
+              description: 過疎なスポット
+              $ref: ~/component/id.yaml#/spotID
+  responses:
+    204:
+      description: No Content
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized
