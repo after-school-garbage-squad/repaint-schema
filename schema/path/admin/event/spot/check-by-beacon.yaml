@@ -1,0 +1,35 @@
+get:
+  summary: check spot status by beacon hwId
+  description: hwIdを指定してスポットを取得する
+  operationId: checkSpotByBeacon
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - hwId
+          properties:
+            hwId:
+              description: ビーコンのハードウェアID
+              type: string
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ~/component/spot.yaml#/Spot
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized
+    404:
+      description: Not Found

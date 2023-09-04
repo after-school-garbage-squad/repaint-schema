@@ -1,0 +1,38 @@
+patch:
+  summary: update spot
+  description: スポットを更新する
+  operationId: updateSpot
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - spotId
+          properties:
+            spotId:
+              $ref: ~/component/id.yaml#/spotID
+            name:
+              description: スポット名
+              type: string
+            isPick:
+              description: pickableなスポットかどうか
+              type: boolean
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ~/component/spot.yaml#/Spot
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized

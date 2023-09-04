@@ -1,0 +1,44 @@
+post:
+  summary: register spot
+  description: スポットを登録する
+  operationId: registerSpot
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - name
+            - iBeacon
+            - hwId
+            - serviceUuid
+          properties:
+            name:
+              description: スポット名
+              type: string
+            iBeacon:
+              $ref: ~/component/spot.yaml#/IBeacon
+            hwId:
+              description: ビーコンのハードウェアID
+              type: string
+            serviceUuid:
+              description: ビーコンのサービスUUID
+              type: string
+  responses:
+    201:
+      description: Created
+      content:
+        application/json:
+          schema:
+            $ref: ~/component/spot.yaml#/Spot
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized

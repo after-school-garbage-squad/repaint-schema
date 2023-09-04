@@ -1,0 +1,25 @@
+get:
+  summary: get spot list
+  description: スポットの一覧を取得する
+  operationId: getSpots
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ~/component/spot.yaml#/Spot
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized
+    404:
+      description: Not Found

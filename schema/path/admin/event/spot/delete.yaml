@@ -1,0 +1,28 @@
+delete:
+  summary: delete spot
+  description: スポットを削除する
+  operationId: deleteSpot
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - spotId
+          properties:
+            spotId:
+              $ref: ~/component/id.yaml#/spotID
+  responses:
+    204:
+      description: No Content
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized

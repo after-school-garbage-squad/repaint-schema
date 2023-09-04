@@ -1,0 +1,34 @@
+get:
+  summary: check spot status by QR code(spotId)
+  description: QRコード(spotId)を指定してスポットを取得する
+  operationId: checkSpotByQR
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - spotId
+          properties:
+            spotId:
+              $ref: ~/component/id.yaml#/spotID
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ~/component/spot.yaml#/Spot
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized
+    404:
+      description: Not Found

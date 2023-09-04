@@ -62,3 +62,15 @@ paths:
     $ref: ./path/visitor/event/palette/drop.yaml
   /visitor/{visitorID}/event/{eventID}/palette/pick:
     $ref: ./path/visitor/event/palette/pick.yaml
+  /admin/event/{eventID}/spot/register:
+    $ref: ./path/admin/event/spot/register.yaml
+  /admin/event/{eventID}/spot/check-by-beacon:
+    $ref: ./path/admin/event/spot/check-by-beacon.yaml
+  /admin/event/{eventID}/spot/check-by-qr:
+    $ref: ./path/admin/event/spot/check-by-qr.yaml
+  /admin/event/{eventID}/spot/list:
+    $ref: ./path/admin/event/spot/list.yaml
+  /admin/event/{eventID}/spot/update:
+    $ref: ./path/admin/event/spot/update.yaml
+  /admin/event/{eventID}/spot/delete:
+    $ref: ./path/admin/event/spot/delete.yaml
