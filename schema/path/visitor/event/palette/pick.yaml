@@ -1,4 +1,4 @@
-put:
+post:
   summary: paletteをpickする
   description: paletteをpickする
   operationId: pickPalette

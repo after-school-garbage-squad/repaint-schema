@@ -1,4 +1,4 @@
-put:
+patch:
   summary: イベントを更新する
   description: イベントを更新する
   operationId: updateEvent
