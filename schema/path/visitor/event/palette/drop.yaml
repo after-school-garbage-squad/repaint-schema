@@ -1,7 +1,7 @@
 post:
-  summary: 参加者の画像を設定する
-  description: 参加者の画像を設定する
-  operationId: setCurrentImage
+  summary: paletteをdropする
+  description: paletteをdropする
+  operationId: dropPalette
   tags:
     - visitor
   parameters:
@@ -10,16 +10,14 @@ post:
   requestBody:
     required: true
     content:
-      multipart/form-data:
+      application/json:
         schema:
           type: object
           required:
-            - image
+            - spotId
           properties:
-            image:
-              description: 画像ファイル
-              type: string
-              format: binary
+            spotId:
+              $ref: ~/component/id.yaml#/spotID
   responses:
     204:
       description: No Content

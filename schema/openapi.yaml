@@ -58,3 +58,7 @@ paths:
     $ref: ./path/visitor/event/image/get-current.yaml
   /visitor/{visitorID}/event/{eventID}/image/set-current:
     $ref: ./path/visitor/event/image/set-current.yaml
+  /visitor/{visitorID}/event/{eventID}/palette/drop:
+    $ref: ./path/visitor/event/palette/drop.yaml
+  /visitor/{visitorID}/event/{eventID}/palette/pick:
+    $ref: ./path/visitor/event/palette/pick.yaml
