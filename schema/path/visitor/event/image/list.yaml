@@ -1,5 +1,5 @@
 get:
-  summary: 参加者に紐づく写真の一覧を取得する
+  summary: get visitor image list
   description: 参加者に紐づく写真の一覧を取得する
   operationId: getVisitorImages
   tags:

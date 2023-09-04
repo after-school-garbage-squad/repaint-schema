@@ -1,5 +1,5 @@
 patch:
-  summary: イベントを更新する
+  summary: update event
   description: イベントを更新する
   operationId: updateEvent
   tags:

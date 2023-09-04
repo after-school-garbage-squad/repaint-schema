@@ -1,5 +1,5 @@
 get:
-  summary: 管理者に紐づくイベントの一覧を取得する
+  summary: get event list
   description: 管理者に紐づくイベントの一覧を取得する
   operationId: getEvents
   tags:

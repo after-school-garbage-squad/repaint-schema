@@ -1,5 +1,5 @@
 post:
-  summary: 管理者を作成し、システムに登録する
+  summary: register admin
   description: 管理者を作成し、システムに登録する
   operationId: register
   tags:

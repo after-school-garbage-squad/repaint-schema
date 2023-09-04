@@ -1,5 +1,5 @@
 delete:
-  summary: デフォルトで登録されている画像を削除する
+  summary: delete default image
   description: デフォルトで登録されている画像を削除する
   operationId: deleteDefaultImage
   tags:

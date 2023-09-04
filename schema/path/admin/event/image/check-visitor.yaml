@@ -1,5 +1,5 @@
 get:
-  summary: 参加者を撮影した画像を取得する
+  summary: check visitor image is exist
   description: 参加者を撮影した画像を取得する
   operationId: checkVisitorImage
   tags:

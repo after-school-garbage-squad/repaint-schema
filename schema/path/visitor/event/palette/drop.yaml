@@ -1,5 +1,5 @@
 post:
-  summary: paletteをdropする
+  summary: drop palette
   description: paletteをdropする
   operationId: dropPalette
   tags:

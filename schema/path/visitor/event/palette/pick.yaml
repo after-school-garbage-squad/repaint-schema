@@ -1,5 +1,5 @@
 post:
-  summary: paletteをpickする
+  summary: pick palette
   description: paletteをpickする
   operationId: pickPalette
   tags:

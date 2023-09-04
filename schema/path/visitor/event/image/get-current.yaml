@@ -1,5 +1,5 @@
 get:
-  summary: 参加者が現在設定している写真を取得する
+  summary: get current image
   description: 参加者が現在設定している写真を取得する
   operationId: getCurrentImage
   tags:

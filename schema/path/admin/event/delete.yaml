@@ -1,5 +1,5 @@
 delete:
-  summary: イベントを削除する
+  summary: delete event
   description: イベントを削除する
   operationId: deleteEvent
   tags:

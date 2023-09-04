@@ -1,5 +1,5 @@
 post:
-  summary: イベントの管理者を追加する
+  summary: add operator
   description: イベントの管理者を追加する
   operationId: addOperation
   tags:

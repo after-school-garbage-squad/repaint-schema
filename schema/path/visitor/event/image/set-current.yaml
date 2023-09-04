@@ -1,5 +1,5 @@
 post:
-  summary: 参加者の画像を設定する
+  summary: set current image
   description: 参加者の画像を設定する
   operationId: setCurrentImage
   tags:

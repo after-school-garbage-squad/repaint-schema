@@ -1,5 +1,5 @@
 post:
-  summary: イベントの管理者を追加するためのメールを送信する
+  summary: send email
   description: イベントの管理者を追加するためのメールを送信する
   operationId: sendEmail
   tags:

@@ -1,5 +1,5 @@
 post:
-  summary: イベントを作成する
+  summary: create event
   description: イベントを作成する
   operationId: createEvent
   tags:

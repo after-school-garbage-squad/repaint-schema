@@ -1,5 +1,5 @@
 post:
-  summary: 参加者を撮影した画像を登録する
+  summary: upload visitor image
   description: 参加者を撮影した画像を登録する
   operationId: uploadVisitorImage
   tags:

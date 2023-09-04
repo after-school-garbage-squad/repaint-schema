@@ -1,5 +1,5 @@
 post:
-  summary: デフォルトで登録される画像を設定する
+  summary: register default image
   description: デフォルトで登録される画像を設定する
   operationId: registerDefaultImage
   tags:
