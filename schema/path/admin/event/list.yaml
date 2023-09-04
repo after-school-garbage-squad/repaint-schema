@@ -12,7 +12,7 @@ get:
           schema:
             type: array
             items:
-              $ref: "~/component/event.yaml#/Event"
+              $ref: ~/component/event.yaml#/Event
     400:
       description: Bad Request
     401:

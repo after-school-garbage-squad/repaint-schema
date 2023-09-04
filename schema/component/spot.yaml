@@ -12,7 +12,7 @@ components:
         - serviceUuid
       properties:
         spotID:
-          $ref: "~/component/id.yaml#/spotID"
+          $ref: ~/component/id.yaml#/spotID
         name:
           type: string
           description: スポット名
@@ -23,7 +23,7 @@ components:
           type: boolean
           description: スポットのステータスがボーナスかどうか
         iBeacon:
-          $ref: "~/component/spot.yaml#/IBeacon"
+          $ref: ~/component/spot.yaml#/IBeacon
         hwId:
           type: string
           description: ビーコンのハードウェアID

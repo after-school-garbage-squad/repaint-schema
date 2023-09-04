@@ -39,7 +39,7 @@ put:
               - contact
             properties:
               eventId:
-                $ref: "~/component/id.yaml#/eventID"
+                $ref: ~/component/id.yaml#/eventID
               name:
                 type: string
                 description: イベント名
@@ -47,7 +47,7 @@ put:
                 type: string
                 description: イベントのホームページのURL
               contact:
-                $ref: "~/component/event.yaml#/Contact"
+                $ref: ~/component/event.yaml#/Contact
     400:
       description: Bad Request
     401:

@@ -28,7 +28,7 @@ components:
         - images
       properties:
         eventId:
-          $ref: "~/component/id.yaml#/eventID"
+          $ref: ~/component/id.yaml#/eventID
         name:
           type: string
           description: イベント名
@@ -36,12 +36,12 @@ components:
           type: string
           description: イベントのホームページのURL
         contact:
-          $ref: "~/component/event.yaml#/Contact"
+          $ref: ~/component/event.yaml#/Contact
         spots:
           type: array
           items:
-            $ref: "~/component/spot.yaml#/Spot"
+            $ref: ~/component/spot.yaml#/Spot
         images:
           type: array
           items:
-            $ref: "~/component/id.yaml#/eventImageID"
+            $ref: ~/component/id.yaml#/eventImageID
