@@ -19,6 +19,8 @@ components:
       scheme: bearer
       bearerFormat: JWT
 
+security: []
+
 paths:
   /admin/register:
     $ref: ./path/admin/register.yaml
