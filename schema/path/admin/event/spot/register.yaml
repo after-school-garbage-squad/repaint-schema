@@ -16,15 +16,12 @@ post:
           type: object
           required:
             - name
-            - iBeacon
             - hwId
             - serviceUuid
           properties:
             name:
               description: スポット名
               type: string
-            iBeacon:
-              $ref: ~/component/spot.yaml#/IBeacon
             hwId:
               description: ビーコンのハードウェアID
               type: string

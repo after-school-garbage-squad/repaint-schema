@@ -8,7 +8,6 @@ components:
         - name
         - isPick
         - bonus
-        - iBeacon
         - hwId
         - serviceUuid
       properties:
@@ -23,28 +22,9 @@ components:
         bonus:
           type: boolean
           description: スポットのステータスがボーナスかどうか
-        iBeacon:
-          $ref: ~/component/spot.yaml#/IBeacon
         hwId:
           type: string
           description: ビーコンのハードウェアID
         serviceUuid:
           type: string
           description: ビーコンのサービスUUID
-    IBeacon:
-      description: iBeaconの情報
-      type: object
-      required:
-        - major
-        - minor
-        - beaconUuid
-      properties:
-        major:
-          type: integer
-          description: ビーコンのmajor
-        minor:
-          type: integer
-          description: ビーコンのminor
-        beaconUuid:
-          type: string
-          description: ビーコンのUUID
