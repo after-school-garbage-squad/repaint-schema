@@ -21,3 +21,6 @@ components:
     registrationId:
       type: string
       description: スマホのプッシュ通知用のID
+    imageID:
+      description: 画像のID(ulid)
+      type: string

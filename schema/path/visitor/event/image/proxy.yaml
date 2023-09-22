@@ -1,0 +1,36 @@
+get:
+  summary: get image url by image id
+  description: 参加者がimage idから写真のURLを取得する
+  operationId: getImageURL
+  tags:
+    - visitor
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - imageId
+          properties:
+            imageId:
+              $ref: ~/component/id.yaml#/imageID
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - url
+            properties:
+              url:
+                type: string
+                format: uri
+    400:
+      description: Bad Request
+    404:
+      description: Not Found
