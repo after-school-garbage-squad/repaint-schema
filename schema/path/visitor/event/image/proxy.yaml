@@ -4,8 +4,6 @@ get:
   operationId: getImageURL
   tags:
     - visitor
-  parameters:
-    - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
     required: true
     content:

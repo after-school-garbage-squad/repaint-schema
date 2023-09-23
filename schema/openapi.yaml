@@ -58,7 +58,7 @@ paths:
     $ref: ./path/visitor/event/image/get-current.yaml
   /visitor/{visitorID}/event/{eventID}/image/set-current:
     $ref: ./path/visitor/event/image/set-current.yaml
-  /visitor/{visitorID}/event/image/proxy:
+  /visitor/event/image/proxy:
     $ref: ./path/visitor/event/image/proxy.yaml
   /visitor/{visitorID}/event/{eventID}/palette/drop:
     $ref: ./path/visitor/event/palette/drop.yaml
