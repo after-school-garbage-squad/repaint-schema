@@ -16,6 +16,8 @@ patch:
           type: object
           required:
             - spotId
+            - name
+            - isPick
           properties:
             spotId:
               $ref: ~/component/id.yaml#/spotID
