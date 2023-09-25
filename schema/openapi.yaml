@@ -60,10 +60,10 @@ paths:
     $ref: ./path/visitor/event/image/set-current.yaml
   /visitor/event/image/proxy:
     $ref: ./path/visitor/event/image/proxy.yaml
-  /visitor/{visitorID}/event/{eventID}/palette/drop:
-    $ref: ./path/visitor/event/palette/drop.yaml
-  /visitor/{visitorID}/event/{eventID}/palette/pick:
-    $ref: ./path/visitor/event/palette/pick.yaml
+  /visitor/{visitorID}/palette/drop:
+    $ref: ./path/visitor/palette/drop.yaml
+  /visitor/{visitorID}/palette/pick:
+    $ref: ./path/visitor/palette/pick.yaml
   /admin/event/{eventID}/spot/register:
     $ref: ./path/admin/event/spot/register.yaml
   /admin/event/{eventID}/spot/check-by-beacon:
