@@ -1,7 +1,7 @@
 post:
-  summary: controll traffic
+  summary: control traffic
   description: 人流を制御する
-  operationId: controllTraffic
+  operationId: controlTraffic
   tags:
     - admin
   security:
