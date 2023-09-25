@@ -32,8 +32,8 @@ security: []
 paths:
   /admin/register:
     $ref: ./path/admin/register.yaml
-  /admin/event/{eventID}/send-email:
-    $ref: ./path/admin/event/send-email.yaml
+  /admin/send-email:
+    $ref: ./path/admin/send-email.yaml
   /admin/add-operator:
     $ref: ./path/admin/add-operator.yaml
   /admin/event/create:

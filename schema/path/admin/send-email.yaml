@@ -15,8 +15,11 @@ post:
         schema:
           type: object
           required:
+            - eventId
             - email
           properties:
+            eventId:
+              $ref: ~/component/id.yaml#/eventID
             email:
               type: string
               format: email
