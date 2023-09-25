@@ -12,7 +12,7 @@ components:
         visitorIdentification:
           $ref: ~/component/visitor.yaml#/VisitorIdentification
         registrationId:
-          $ref: ~/component/id.yaml#/registrationId
+          $ref: ~/component/id.yaml#/registrationID
         palettes:
           type: array
           items:
@@ -32,7 +32,7 @@ components:
         visitorIdentification:
           $ref: ~/component/visitor.yaml#/VisitorIdentification
         registrationId:
-          $ref: ~/component/id.yaml#/registrationId
+          $ref: ~/component/id.yaml#/registrationID
         palettes:
           type: array
           items:

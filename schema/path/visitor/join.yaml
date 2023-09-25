@@ -4,8 +4,6 @@ post:
   operationId: joinEvent
   tags:
     - visitor
-  parameters:
-    - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
     required: true
     content:
@@ -13,10 +11,13 @@ post:
         schema:
           type: object
           required:
+            - eventId
             - registrationId
           properties:
+            eventId:
+              $ref: ~/component/id.yaml#/eventID
             registrationId:
-              $ref: ~/component/id.yaml#/registrationId
+              $ref: ~/component/id.yaml#/registrationID
   responses:
     200:
       description: OK

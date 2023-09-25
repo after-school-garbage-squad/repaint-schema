@@ -6,8 +6,6 @@ post:
     - admin
   security:
     - bearerAuth: []
-  parameters:
-    - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
     required: true
     content:

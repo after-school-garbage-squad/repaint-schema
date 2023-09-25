@@ -6,7 +6,17 @@ delete:
     - visitor
   parameters:
     - $ref: ~/parameter/path.yaml#/visitorID
-    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - eventID
+          properties:
+            eventID:
+              $ref: ~/component/id.yaml#/eventID
   responses:
     204:
       description: No Content
