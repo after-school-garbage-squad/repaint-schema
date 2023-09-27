@@ -6,7 +6,17 @@ get:
     - visitor
   parameters:
     - $ref: ~/parameter/path.yaml#/visitorID
-    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - eventId
+          properties:
+            eventId:
+              $ref: ~/component/id.yaml#/eventID
   responses:
     200:
       description: OK

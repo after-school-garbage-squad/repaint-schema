@@ -4,6 +4,8 @@ get:
   operationId: getImageURL
   tags:
     - visitor
+  parameters:
+    - $ref: ~/parameter/path.yaml#/visitorID
   requestBody:
     required: true
     content:
@@ -11,10 +13,13 @@ get:
         schema:
           type: object
           required:
+            - eventId
             - imageId
           properties:
+            eventId:
+              $ref: ~/component/id.yaml#/eventID
             imageId:
-              $ref: ~/component/id.yaml#/imageID
+              $ref: ~/component/id.yaml#/visitorImageID
   responses:
     200:
       description: OK

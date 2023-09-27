@@ -52,14 +52,14 @@ paths:
     $ref: ./path/admin/event/image/check-visitor.yaml
   /admin/event/{eventID}/image/upload-visitor:
     $ref: ./path/admin/event/image/upload-visitor.yaml
-  /visitor/{visitorID}/event/{eventID}/image/list:
-    $ref: ./path/visitor/event/image/list.yaml
-  /visitor/{visitorID}/event/{eventID}/image/get-current:
-    $ref: ./path/visitor/event/image/get-current.yaml
-  /visitor/{visitorID}/event/{eventID}/image/set-current:
-    $ref: ./path/visitor/event/image/set-current.yaml
-  /visitor/event/image/proxy:
-    $ref: ./path/visitor/event/image/proxy.yaml
+  /visitor/{visitorID}/image/list:
+    $ref: ./path/visitor/image/list.yaml
+  /visitor/{visitorID}/image/get-current:
+    $ref: ./path/visitor/image/get-current.yaml
+  /visitor/{visitorID}/image/set-current:
+    $ref: ./path/visitor/image/set-current.yaml
+  /visitor/{visitorID}/image/proxy:
+    $ref: ./path/visitor/image/proxy.yaml
   /visitor/{visitorID}/palette/drop:
     $ref: ./path/visitor/palette/drop.yaml
   /visitor/{visitorID}/palette/pick:

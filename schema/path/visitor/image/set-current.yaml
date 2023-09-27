@@ -6,7 +6,6 @@ post:
     - visitor
   parameters:
     - $ref: ~/parameter/path.yaml#/visitorID
-    - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
     required: true
     content:
@@ -14,12 +13,13 @@ post:
         schema:
           type: object
           required:
-            - image
+            - eventId
+            - imageId
           properties:
-            image:
-              description: 画像ファイル
-              type: string
-              format: binary
+            eventId:
+              $ref: ~/component/id.yaml#/eventID
+            imageId:
+              $ref: ~/component/id.yaml#/visitorImageID
   responses:
     204:
       description: No Content
