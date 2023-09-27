@@ -1,0 +1,33 @@
+get:
+  summary: Check for updates to an image
+  description: 画像に更新があるか確認する
+  operationId: checkUpdate
+  tags:
+    - visitor
+  parameters:
+    - $ref: ~/parameter/path.yaml#/visitorID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - eventId
+          properties:
+            eventId:
+              $ref: ~/component/id.yaml#/eventID
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - isUpdated
+            properties:
+              isUpdated:
+                type: boolean
+    400:
+      description: Bad Request

@@ -62,6 +62,8 @@ paths:
     $ref: ./path/visitor/image/set-current.yaml
   /visitor/{visitorID}/image/proxy:
     $ref: ./path/visitor/image/proxy.yaml
+  /visitor/{visitorID}/image/check-update:
+    $ref: ./path/visitor/image/check-update.yaml
   /visitor/{visitorID}/palette/drop:
     $ref: ./path/visitor/palette/drop.yaml
   /visitor/{visitorID}/palette/pick:
