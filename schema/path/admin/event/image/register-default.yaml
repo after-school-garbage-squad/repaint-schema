@@ -15,10 +15,12 @@ post:
         schema:
           type: object
           required:
-            - imageId
+            - image
           properties:
-            imageId:
-              $ref: ~/component/id.yaml#/eventImageID
+            image:
+              description: 画像ファイル
+              type: string
+              format: binary
   responses:
     204:
       description: No Content
