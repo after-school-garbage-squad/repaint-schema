@@ -54,6 +54,8 @@ paths:
     $ref: ./path/admin/event/image/upload-visitor.yaml
   /admin/event/{eventID}/image/update-notification:
     $ref: ./path/admin/event/image/update-notification.yaml
+  /admin/event/{eventID}/image/proxy:
+    $ref: ./path/admin/event/image/proxy.yaml
   /visitor/{visitorID}/image/list:
     $ref: ./path/visitor/image/list.yaml
   /visitor/{visitorID}/image/get-current:

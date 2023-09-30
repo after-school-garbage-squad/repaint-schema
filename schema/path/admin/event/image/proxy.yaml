@@ -1,11 +1,13 @@
 get:
   summary: get image url by image id
-  description: 参加者がimage idから写真のURLを取得する
-  operationId: getCurrentImageURL
+  description: 管理者がimage idから写真のURLを取得する
+  operationId: getDefaultImageURL
   tags:
-    - visitor
+    - admin
+  security:
+    - bearerAuth: []
   parameters:
-    - $ref: ~/parameter/path.yaml#/visitorID
+    - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
     required: true
     content:
@@ -13,13 +15,10 @@ get:
         schema:
           type: object
           required:
-            - eventId
             - imageId
           properties:
-            eventId:
-              $ref: ~/component/id.yaml#/eventID
             imageId:
-              $ref: ~/component/id.yaml#/visitorImageID
+              $ref: ~/component/id.yaml#/eventImageID
   responses:
     200:
       description: OK
@@ -35,5 +34,7 @@ get:
                 format: uri
     400:
       description: Bad Request
+    401:
+      description: Unauthorized
     404:
       description: Not Found
