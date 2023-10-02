@@ -1,0 +1,32 @@
+get:
+  summary: get visitor image list
+  description: 参加者に紐づく写真の一覧を取得する
+  operationId: getVisitorImages
+  tags:
+    - visitor
+  parameters:
+    - $ref: ~/parameter/path.yaml#/visitorID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - eventId
+          properties:
+            eventId:
+              $ref: ~/component/id.yaml#/eventID
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ~/component/id.yaml#/visitorImageID
+    400:
+      description: Bad Request
+    404:
+      description: Not Found

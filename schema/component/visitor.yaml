@@ -1,21 +1,50 @@
 components:
   schemas:
     Visitor:
+      description: イベント参加者
       type: object
       required:
-        - id
-        - notification_id
-        - pallet_status
-        - current_image_id
+        - visitorIdentification
+        - registrationId
+        - palettes
+        - currentImageId
       properties:
-        id:
-          $ref: ./id.yaml#/visitorID
-        notification_id:
-          $ref: ./id.yaml#/notificationID
-        pallet_status:
-          description: Status of the pallet (Format will be percent)
-          type: number
-        image_id:
-          $ref: ./id.yaml#/imageID
-        current_image_id:
-          $ref: ./id.yaml#/imageID
+        visitorIdentification:
+          $ref: ~/component/visitor.yaml#/VisitorIdentification
+        registrationId:
+          $ref: ~/component/id.yaml#/registrationID
+        palettes:
+          type: array
+          items:
+            type: integer
+        imageId:
+          $ref: ~/component/id.yaml#/visitorImageID
+        currentImageId:
+          $ref: ~/component/id.yaml#/currentImageID
+    RegisterVisitor:
+      description: イベント参加者登録時のレスポンス
+      type: object
+      required:
+        - visitorIdentification
+        - registrationId
+        - palettes
+      properties:
+        visitorIdentification:
+          $ref: ~/component/visitor.yaml#/VisitorIdentification
+        registrationId:
+          $ref: ~/component/id.yaml#/registrationID
+        palettes:
+          type: array
+          items:
+            type: integer
+    VisitorIdentification:
+      description: 参加者の識別子
+      type: object
+      required:
+        - eventId
+        - visitorId
+      properties:
+        eventId:
+          $ref: ~/component/id.yaml#/eventID
+        visitorId:
+          $ref: ~/component/id.yaml#/visitorID

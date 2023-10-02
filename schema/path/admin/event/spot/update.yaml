@@ -1,7 +1,7 @@
 patch:
-  summary: update event
-  description: イベントを更新する
-  operationId: updateEvent
+  summary: update spot
+  description: スポットを更新する
+  operationId: updateSpot
   tags:
     - admin
   security:
@@ -15,25 +15,25 @@ patch:
         schema:
           type: object
           required:
+            - spotId
             - name
-            - hpUrl
-            - contact
+            - isPick
           properties:
+            spotId:
+              $ref: ~/component/id.yaml#/spotID
             name:
+              description: スポット名
               type: string
-              description: イベント名
-            hpUrl:
-              type: string
-              description: イベントのホームページのURL
-            contact:
-              $ref: ~/component/event.yaml#/Contact
+            isPick:
+              description: pickableなスポットかどうか
+              type: boolean
   responses:
     200:
       description: OK
       content:
         application/json:
           schema:
-            $ref: ~/component/event.yaml#/UpdateEvent
+            $ref: ~/component/spot.yaml#/Spot
     400:
       description: Bad Request
     401:

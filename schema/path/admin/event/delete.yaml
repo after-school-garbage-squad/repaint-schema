@@ -1,7 +1,11 @@
 delete:
-  summary: Delete event
-  description: Delete event by event id
+  summary: delete event
+  description: イベントを削除する
   operationId: deleteEvent
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
   parameters:
     - $ref: ~/parameter/path.yaml#/eventID
   responses:

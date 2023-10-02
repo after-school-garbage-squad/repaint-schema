@@ -1,13 +1,9 @@
-delete:
-  summary: delete spot
-  description: スポットを削除する
-  operationId: deleteSpot
+post:
+  summary: register admin
+  description: 管理者を作成し、システムに登録する
+  operationId: register
   tags:
-    - admin
-  security:
-    - bearerAuth: []
-  parameters:
-    - $ref: ~/parameter/path.yaml#/eventID
+    - auth
   requestBody:
     required: true
     content:
@@ -15,10 +11,11 @@ delete:
         schema:
           type: object
           required:
-            - spotId
+            - subject
           properties:
-            spotId:
-              $ref: ~/component/id.yaml#/spotID
+            subject:
+              type: string
+              description: Auth0のuser profileのuser_id
   responses:
     204:
       description: No Content

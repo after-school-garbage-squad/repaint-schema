@@ -1,7 +1,7 @@
-delete:
-  summary: delete spot
-  description: スポットを削除する
-  operationId: deleteSpot
+post:
+  summary: upload visitor image
+  description: 参加者を撮影した画像を登録する
+  operationId: uploadVisitorImage
   tags:
     - admin
   security:
@@ -11,14 +11,16 @@ delete:
   requestBody:
     required: true
     content:
-      application/json:
+      multipart/form-data:
         schema:
           type: object
           required:
-            - spotId
+            - image
           properties:
-            spotId:
-              $ref: ~/component/id.yaml#/spotID
+            image:
+              description: 画像ファイル
+              type: string
+              format: binary
   responses:
     204:
       description: No Content

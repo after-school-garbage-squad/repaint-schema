@@ -1,10 +1,11 @@
-post:
-  summary: Process QR code data and pick a palette
-  description: Process QR code data and pick a palette
-  operationId: pickPalette
+delete:
+  summary: delete visitor
+  description: 参加者を削除する
+  operationId: deleteVisitor
+  tags:
+    - visitor
   parameters:
     - $ref: ~/parameter/path.yaml#/visitorID
-    - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
     required: true
     content:
@@ -12,10 +13,10 @@ post:
         schema:
           type: object
           required:
-            - qr
+            - eventID
           properties:
-            qr:
-              $ref: ~/component/id.yaml#/pickQRID
+            eventID:
+              $ref: ~/component/id.yaml#/eventID
   responses:
     204:
       description: No Content

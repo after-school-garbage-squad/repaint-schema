@@ -1,13 +1,11 @@
-delete:
-  summary: delete spot
-  description: スポットを削除する
-  operationId: deleteSpot
+post:
+  summary: add operator
+  description: イベントの管理者を追加する
+  operationId: addOperation
   tags:
     - admin
   security:
     - bearerAuth: []
-  parameters:
-    - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
     required: true
     content:
@@ -15,10 +13,11 @@ delete:
         schema:
           type: object
           required:
-            - spotId
+            - token
           properties:
-            spotId:
-              $ref: ~/component/id.yaml#/spotID
+            token:
+              type: string
+              description: emailに添付されているURLの末尾にクエリパラメータとして付与されているtoken
   responses:
     204:
       description: No Content

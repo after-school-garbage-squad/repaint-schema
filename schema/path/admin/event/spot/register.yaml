@@ -1,7 +1,11 @@
 post:
-  summary: Register a new spot
-  description: Register a new spot
+  summary: register spot
+  description: スポットを登録する
   operationId: registerSpot
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
   parameters:
     - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
@@ -9,7 +13,21 @@ post:
     content:
       application/json:
         schema:
-          $ref: ~/component/spot.yaml#/RegisterSpot
+          type: object
+          required:
+            - name
+            - hwId
+            - serviceUuid
+          properties:
+            name:
+              description: スポット名
+              type: string
+            hwId:
+              description: ビーコンのハードウェアID
+              type: string
+            serviceUuid:
+              description: ビーコンのサービスUUID
+              type: string
   responses:
     201:
       description: Created

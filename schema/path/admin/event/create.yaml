@@ -1,20 +1,37 @@
 post:
-  summary: Create a new event
-  description: Create a new event
+  summary: create event
+  description: イベントを作成する
   operationId: createEvent
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: ~/component/event.yaml#/CreateEvent
+          type: object
+          required:
+            - name
+            - hpUrl
+            - contact
+          properties:
+            name:
+              type: string
+              description: イベント名
+            hpUrl:
+              type: string
+              description: イベントのホームページのURL
+            contact:
+              $ref: ~/component/event.yaml#/Contact
   responses:
     201:
       description: Created
       content:
         application/json:
           schema:
-            $ref: ~/component/event.yaml#/Event
+            $ref: ~/component/event.yaml#/CreateEvent
     400:
       description: Bad Request
     401:

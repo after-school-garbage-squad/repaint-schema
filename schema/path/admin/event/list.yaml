@@ -1,23 +1,23 @@
 get:
-  summary: Get list of event
-  description: Get list of event
-  operationId: eventList
-  parameters:
-    - $ref: ~/parameter/path.yaml#/adminID
-    - $ref: ~/parameter/path.yaml#/eventID
+  summary: get event list
+  description: 管理者に紐づくイベントの一覧を取得する
+  operationId: getEvents
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
   responses:
     200:
       description: OK
       content:
         application/json:
           schema:
-            type: object
-            properties:
-              events:
-                type: array
-                items:
-                  $ref: ~/component/event.yaml#/Event
+            type: array
+            items:
+              $ref: ~/component/event.yaml#/Event
     400:
       description: Bad Request
     401:
       description: Unauthorized
+    404:
+      description: Not Found

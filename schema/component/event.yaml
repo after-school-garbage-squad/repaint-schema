@@ -1,35 +1,74 @@
 components:
   schemas:
     Event:
+      description: イベント
       type: object
       required:
-        - url
-        - beacons
-        - image_id
+        - eventId
         - name
+        - hpUrl
         - contact
+        - spots
+        - images
       properties:
-        id:
-          $ref: ./id.yaml#/eventID
-        url:
-          type: string
-          description: URL of the event home page
-        beacons:
-          type: array
-          description: List of beacon data
-          items:
-            $ref: ./beacon.yaml#/Beacon
-        image_id:
-          type: array
-          description: List of image IDs
-          items:
-            $ref: ./id.yaml#/imageID
+        eventId:
+          $ref: ~/component/id.yaml#/eventID
         name:
           type: string
-          description: Name of the event
+          description: イベント名
+        hpUrl:
+          type: string
+          description: イベントのホームページのURL
         contact:
-          $ref: "#/Contact"
+          $ref: ~/component/event.yaml#/Contact
+        spots:
+          type: array
+          items:
+            $ref: ~/component/spot.yaml#/Spot
+        images:
+          type: array
+          items:
+            $ref: ~/component/id.yaml#/eventImageID
+    CreateEvent:
+      description: イベント作成時のレスポンス
+      type: object
+      required:
+        - eventId
+        - name
+        - hpUrl
+        - contact
+      properties:
+        eventId:
+          $ref: ~/component/id.yaml#/eventID
+        name:
+          type: string
+          description: イベント名
+        hpUrl:
+          type: string
+          description: イベントのホームページのURL
+        contact:
+          $ref: ~/component/event.yaml#/Contact
+    UpdateEvent:
+      description: イベント更新時のレスポンス
+      type: object
+      required:
+        - eventId
+        - name
+        - hpUrl
+        - contact
+      properties:
+        eventId:
+          $ref: ~/component/id.yaml#/eventID
+        name:
+          type: string
+          description: イベント名
+        hpUrl:
+          type: string
+          description: イベントのホームページのURL
+        contact:
+          $ref: ~/component/event.yaml#/Contact
     Contact:
+      description: イベントの責任者情報
       type: object
       required:
         - name
@@ -38,52 +77,11 @@ components:
       properties:
         name:
           type: string
-          description: Name of the event admin
+          description: イベントの責任者の名前
         email:
           type: string
-          description: Email of the event admin
+          format: email
+          description: イベントの責任者のメールアドレス
         phone:
           type: string
-          description: Phone number of the event admin
-    CreateEvent:
-      type: object
-      required:
-        - url
-        - image_id
-        - name
-        - contact
-      properties:
-        url:
-          type: string
-          description: URL of the event home page
-        image_id:
-          type: array
-          description: List of image IDs
-          items:
-            $ref: ./id.yaml#/imageID
-        name:
-          type: string
-          description: Name of the event
-        contact:
-          $ref: "#/Contact"
-    UpdateEvent:
-      type: object
-      required:
-        - url
-        - image_id
-        - name
-        - contact
-      properties:
-        url:
-          type: string
-          description: URL of the event home page
-        image_id:
-          type: array
-          description: List of image IDs
-          items:
-            $ref: ./id.yaml#/imageID
-        name:
-          type: string
-          description: Name of the event
-        contact:
-          $ref: "#/Contact"
+          description: イベントの責任者の電話番号

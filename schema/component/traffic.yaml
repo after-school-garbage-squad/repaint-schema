@@ -1,0 +1,14 @@
+components:
+  schemas:
+    TrafficStatus:
+      description: トラフィックの状態
+      type: object
+      required:
+        - spotId
+        - headCount
+      properties:
+        spotId:
+          $ref: ~/component/id.yaml#/spotID
+        headCount:
+          description: そのspotにいた人数
+          type: integer

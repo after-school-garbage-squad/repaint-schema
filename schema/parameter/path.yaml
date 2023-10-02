@@ -1,30 +1,16 @@
 components:
   parameters:
-    spotID:
-      in: path
-      name: spotID
-      description: ID of spot
-      required: true
-      schema:
-        $ref: ~/component/id.yaml#/spotID
     eventID:
       in: path
       name: eventID
-      description: ID of event
+      description: イベントのパブリックID
       required: true
       schema:
         $ref: ~/component/id.yaml#/eventID
     visitorID:
       in: path
       name: visitorID
-      description: ID of visitor
+      description: 参加者のパブリックID
       required: true
       schema:
         $ref: ~/component/id.yaml#/visitorID
-    adminID:
-      in: path
-      name: adminID
-      description: ID of admin
-      required: true
-      schema:
-        $ref: ~/component/id.yaml#/adminID

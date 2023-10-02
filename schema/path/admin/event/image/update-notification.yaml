@@ -1,11 +1,9 @@
-delete:
-  summary: delete spot
-  description: スポットを削除する
-  operationId: deleteSpot
+post:
+  summary: image update notification
+  description: 画像処理が完了したことを通知する
+  operationId: updateNotification
   tags:
     - admin
-  security:
-    - bearerAuth: []
   parameters:
     - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
@@ -15,14 +13,12 @@ delete:
         schema:
           type: object
           required:
-            - spotId
+            - visitorId
           properties:
-            spotId:
-              $ref: ~/component/id.yaml#/spotID
+            visitorId:
+              $ref: ~/component/id.yaml#/visitorID
   responses:
     204:
       description: No Content
     400:
       description: Bad Request
-    401:
-      description: Unauthorized

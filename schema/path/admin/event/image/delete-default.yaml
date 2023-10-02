@@ -1,7 +1,7 @@
-post:
-  summary: control traffic
-  description: 人流を制御する
-  operationId: controlTraffic
+delete:
+  summary: delete default image
+  description: デフォルトで登録されている画像を削除する
+  operationId: deleteDefaultImage
   tags:
     - admin
   security:
@@ -15,15 +15,10 @@ post:
         schema:
           type: object
           required:
-            - form
-            - to
+            - imageId
           properties:
-            from:
-              description: 過密なスポット
-              $ref: ~/component/id.yaml#/spotID
-            to:
-              description: 過疎なスポット
-              $ref: ~/component/id.yaml#/spotID
+            imageId:
+              $ref: ~/component/id.yaml#/eventImageID
   responses:
     204:
       description: No Content

@@ -1,0 +1,37 @@
+get:
+  summary: check visitor image is exist
+  description: 参加者を撮影した画像を取得する
+  operationId: checkVisitorImage
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
+  parameters:
+    - $ref: ~/parameter/path.yaml#/eventID
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - visitorId
+          properties:
+            imageId:
+              $ref: ~/component/id.yaml#/visitorID
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              imageId:
+                $ref: ~/component/id.yaml#/visitorImageID
+    400:
+      description: Bad Request
+    401:
+      description: Unauthorized
+    404:
+      description: Not Found

@@ -1,38 +1,26 @@
 components:
   schemas:
-    iBeaconID:
-      description: UUID of u128 that iBeacon has
-      type: integer
-    HWID:
-      description: Hardware ID of u10 held by iBeacon
-      type: integer
-    serviceUUID:
-      description: Bluetooth variable length serviceUUID
+    eventID:
+      description: イベントのパブリックID(ulid)
+      type: string
+    eventImageID:
+      description: イベントのデフォルト画像のID(ulid)
+      type: string
+    visitorImageID:
+      description: 参加者が撮影した画像のID(ulid)
+      type: string
+    currentImageID:
+      description: 参加者が現在設定している画像のID(ulid)
+      type: string
+    spotID:
+      description: スポットのパブリックID(ulid)
       type: string
     visitorID:
-      description: ID of visitor
+      description: 参加者のパブリックID(ulid)
       type: string
-      format: uuid
-    notificationID:
-      description: Id for notification
+    registrationID:
       type: string
+      description: スマホのプッシュ通知用のID
     imageID:
-      description: Id referring to photos taken by participants at the photo spot
+      description: 画像のID(ulid)
       type: string
-      format: uuid
-    spotID:
-      description: ID of spot
-      type: string
-      format: uuid
-    eventID:
-      description: ID of event
-      type: string
-      format: uuid
-    pickQRID:
-      description: ID of QR code for pick palette
-      type: string
-      format: uuid
-    adminID:
-      description: ID of admin
-      type: string
-      format: uuid

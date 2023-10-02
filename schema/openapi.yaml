@@ -3,7 +3,7 @@ openapi: 3.0.1
 info:
   title: Re:paint API
   description: API for Re:paint
-  version: "1.0.0"
+  version: 2.0.0
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
@@ -12,89 +12,83 @@ servers:
   - url: http://localhost:3003
     description: Local server
 
+tags:
+  - name: admin
+    description: API for administrators
+  - name: visitor
+    description: API for visitors
+  - name: auth
+    description: API for authentication
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
 security: []
 
 paths:
-  /admin/event/{eventID}/spot/register:
-    $ref: ./path/admin/event/spot/register.yaml
-
-  /admin/event/{eventID}/spot/check/beacon:
-    $ref: ./path/admin/event/spot/check/beacon.yaml
-
-  /admin/event/{eventID}/spot/check/qr:
-    $ref: ./path/admin/event/spot/check/qr.yaml
-
-  /admin/event/{eventID}/spot/list:
-    $ref: ./path/admin/event/spot/list.yaml
-
-  /admin/event/{eventID}/spot/{spotID}/delete:
-    $ref: ./path/admin/event/spot/delete.yaml
-
-  /admin/event/{eventID}/spot/{spotID}/qr:
-    $ref: ./path/admin/event/spot/qr.yaml
-
+  /admin/register:
+    $ref: ./path/admin/register.yaml
+  /admin/send-email:
+    $ref: ./path/admin/send-email.yaml
+  /admin/add-operator:
+    $ref: ./path/admin/add-operator.yaml
   /admin/event/create:
     $ref: ./path/admin/event/create.yaml
-
-  /admin/{adminID}/event/{eventID}/list:
-    $ref: ./path/admin/event/list.yaml
-
-  /admin/event/{eventID}/update:
-    $ref: ./path/admin/event/update.yaml
-
-  /admin/event/{eventID}/add-operator:
-    $ref: ./path/admin/event/add-operator.yaml
-
-  /admin/event/{eventID}/qr:
-    $ref: ./path/admin/event/qr.yaml
-
-  /admin/event/{eventID}/notification:
-    $ref: ./path/admin/event/notification.yaml
-
   /admin/event/{eventID}/delete:
     $ref: ./path/admin/event/delete.yaml
-
-  /admin/event/{eventID}/default-image:
-    $ref: ./path/admin/event/default-image.yaml
-
-  /admin/event/{eventID}/traffic/status:
-    $ref: ./path/admin/event/traffic/status.yaml
-
+  /admin/event/list:
+    $ref: ./path/admin/event/list.yaml
+  /admin/event/{eventID}/update:
+    $ref: ./path/admin/event/update.yaml
+  /admin/event/{eventID}/image/register-default:
+    $ref: ./path/admin/event/image/register-default.yaml
+  /admin/event/{eventID}/image/delete-default:
+    $ref: ./path/admin/event/image/delete-default.yaml
+  /admin/event/{eventID}/image/check-visitor:
+    $ref: ./path/admin/event/image/check-visitor.yaml
+  /admin/event/{eventID}/image/upload-visitor:
+    $ref: ./path/admin/event/image/upload-visitor.yaml
+  /admin/event/{eventID}/image/update-notification:
+    $ref: ./path/admin/event/image/update-notification.yaml
+  /admin/event/{eventID}/image/proxy:
+    $ref: ./path/admin/event/image/proxy.yaml
+  /visitor/{visitorID}/image/list:
+    $ref: ./path/visitor/image/list.yaml
+  /visitor/{visitorID}/image/get-current:
+    $ref: ./path/visitor/image/get-current.yaml
+  /visitor/{visitorID}/image/set-current:
+    $ref: ./path/visitor/image/set-current.yaml
+  /visitor/{visitorID}/image/proxy:
+    $ref: ./path/visitor/image/proxy.yaml
+  /visitor/{visitorID}/image/check-update:
+    $ref: ./path/visitor/image/check-update.yaml
+  /visitor/{visitorID}/palette/drop:
+    $ref: ./path/visitor/palette/drop.yaml
+  /visitor/{visitorID}/palette/pick:
+    $ref: ./path/visitor/palette/pick.yaml
+  /admin/event/{eventID}/spot/register:
+    $ref: ./path/admin/event/spot/register.yaml
+  /admin/event/{eventID}/spot/check-by-beacon:
+    $ref: ./path/admin/event/spot/check-by-beacon.yaml
+  /admin/event/{eventID}/spot/check-by-qr:
+    $ref: ./path/admin/event/spot/check-by-qr.yaml
+  /admin/event/{eventID}/spot/list:
+    $ref: ./path/admin/event/spot/list.yaml
+  /admin/event/{eventID}/spot/update:
+    $ref: ./path/admin/event/spot/update.yaml
+  /admin/event/{eventID}/spot/delete:
+    $ref: ./path/admin/event/spot/delete.yaml
+  /admin/event/{eventID}/traffic/get-status:
+    $ref: ./path/admin/event/traffic/get-status.yaml
   /admin/event/{eventID}/traffic/control:
     $ref: ./path/admin/event/traffic/control.yaml
-
-  /admin/event/{eventID}/visitor/{visitorID}/check:
-    $ref: ./path/admin/event/visitor/check.yaml
-
-  /admin/event/{eventID}/visitor/{visitorID}/photo:
-    $ref: ./path/admin/event/visitor/photo.yaml
-
-  /visitor/event/join:
-    $ref: ./path/visitor/event/join.yaml
-
-  /visitor/{visitorID}/event/{eventID}/qr:
-    $ref: ./path/visitor/event/qr.yaml
-
-  /visitor/{visitorID}/event/{eventID}/startup:
-    $ref: ./path/visitor/event/startup.yaml
-
-  /visitor/{visitorID}/event/{eventID}/notification:
-    $ref: ./path/visitor/event/notification.yaml
-
-  /visitor/{visitorID}/event/{eventID}/delete:
-    $ref: ./path/visitor/event/delete.yaml
-
-  /visitor/{visitorID}/event/{eventID}/image/list:
-    $ref: ./path/visitor/event/image/list.yaml
-
-  /visitor/{visitorID}/event/{eventID}/image/select:
-    $ref: ./path/visitor/event/image/select.yaml
-
-  /visitor/{visitorID}/event/{eventID}/image/current:
-    $ref: ./path/visitor/event/image/current.yaml
-
-  /visitor/{visitorID}/event/{eventID}/spot/drop:
-    $ref: ./path/visitor/event/spot/drop.yaml
-
-  /visitor/{visitorID}/event/{eventID}/spot/pick:
-    $ref: ./path/visitor/event/spot/pick.yaml
+  /visitor/join:
+    $ref: ./path/visitor/join.yaml
+  /visitor/{visitorID}/initialize:
+    $ref: ./path/visitor/initialize.yaml
+  /visitor/{visitorID}/delete:
+    $ref: ./path/visitor/delete.yaml

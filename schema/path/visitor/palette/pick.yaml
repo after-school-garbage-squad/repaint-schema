@@ -1,13 +1,11 @@
-delete:
-  summary: delete spot
-  description: スポットを削除する
-  operationId: deleteSpot
+post:
+  summary: pick palette
+  description: paletteをpickする
+  operationId: pickPalette
   tags:
-    - admin
-  security:
-    - bearerAuth: []
+    - visitor
   parameters:
-    - $ref: ~/parameter/path.yaml#/eventID
+    - $ref: ~/parameter/path.yaml#/visitorID
   requestBody:
     required: true
     content:
@@ -15,8 +13,11 @@ delete:
         schema:
           type: object
           required:
+            - eventId
             - spotId
           properties:
+            eventId:
+              $ref: ~/component/id.yaml#/eventID
             spotId:
               $ref: ~/component/id.yaml#/spotID
   responses:
@@ -24,5 +25,3 @@ delete:
       description: No Content
     400:
       description: Bad Request
-    401:
-      description: Unauthorized

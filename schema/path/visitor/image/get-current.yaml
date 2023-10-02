@@ -1,10 +1,11 @@
 get:
-  summary: Get the currently selected image
-  description: Get the currently selected image
+  summary: get current image
+  description: 参加者が現在設定している写真を取得する
   operationId: getCurrentImage
+  tags:
+    - visitor
   parameters:
     - $ref: ~/parameter/path.yaml#/visitorID
-    - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
     required: true
     content:
@@ -12,10 +13,10 @@ get:
         schema:
           type: object
           required:
-            - image
+            - eventId
           properties:
-            image:
-              $ref: ~/component/id.yaml#/imageID
+            eventId:
+              $ref: ~/component/id.yaml#/eventID
   responses:
     200:
       description: OK
@@ -23,8 +24,12 @@ get:
         application/json:
           schema:
             type: object
+            required:
+              - imageId
             properties:
-              image:
-                $ref: ~/component/id.yaml#/imageID
+              imageId:
+                $ref: ~/component/id.yaml#/currentImageID
     400:
       description: Bad Request
+    404:
+      description: Not Found

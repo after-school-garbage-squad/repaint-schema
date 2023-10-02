@@ -1,7 +1,11 @@
 post:
-  summary: Controlling Notifications
-  description: Controlling Notifications
-  operationId: controlNotifications
+  summary: register default image
+  description: デフォルトで登録される画像を設定する
+  operationId: registerDefaultImage
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
   parameters:
     - $ref: ~/parameter/path.yaml#/eventID
   requestBody:
@@ -11,11 +15,12 @@ post:
         schema:
           type: object
           required:
-            - content
+            - image
           properties:
-            content:
+            image:
+              description: 画像ファイル
               type: string
-              description: Content of the notification
+              format: binary
   responses:
     204:
       description: No Content

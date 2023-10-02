@@ -1,7 +1,11 @@
 get:
-  summary: Get traffic status
-  description: Get traffic status by event id
+  summary: get traffic status
+  description: イベントの人流を取得する
   operationId: getTrafficStatus
+  tags:
+    - admin
+  security:
+    - bearerAuth: []
   parameters:
     - $ref: ~/parameter/path.yaml#/eventID
   responses:
@@ -12,7 +16,7 @@ get:
           schema:
             type: array
             items:
-              $ref: ~/component/spot.yaml#/TrafficStatus
+              $ref: ~/component/traffic.yaml#/TrafficStatus
     400:
       description: Bad Request
     401:

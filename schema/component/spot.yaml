@@ -1,39 +1,30 @@
 components:
   schemas:
     Spot:
+      description: スポット
       type: object
       required:
+        - spotId
         - name
-        - beacon_data
+        - isPick
+        - bonus
+        - hwId
+        - serviceUuid
       properties:
-        id:
-          $ref: ./id.yaml#/spotID
+        spotID:
+          $ref: ~/component/id.yaml#/spotID
         name:
           type: string
-          description: Name of the spot
-        beacon_data:
-          $ref: ./beacon.yaml#/Beacon
-        qr:
-          $ref: ./id.yaml#/pickQRID
-    TrafficStatus:
-      type: object
-      required:
-        - id
-        - status
-      properties:
-        id:
-          $ref: ./id.yaml#/spotID
-        hc:
-          type: integer
-          description: Number of people
-    RegisterSpot:
-      type: object
-      required:
-        - name
-        - beacon_data
-      properties:
-        name:
+          description: スポット名
+        isPick:
+          type: boolean
+          description: pickableなスポットかどうか
+        bonus:
+          type: boolean
+          description: スポットのステータスがボーナスかどうか
+        hwId:
           type: string
-          description: Name of the spot
-        beacon_data:
-          $ref: ./beacon.yaml#/Beacon
+          description: ビーコンのハードウェアID
+        serviceUuid:
+          type: string
+          description: ビーコンのサービスUUID

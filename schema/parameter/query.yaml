@@ -1,9 +1,2 @@
 components:
   parameters:
-    qrID:
-      in: query
-      name: qrID
-      description: ID of QR code
-      required: true
-      schema:
-        $ref: ~/component/id.yaml#/pickQRID

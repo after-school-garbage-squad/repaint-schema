@@ -1,7 +1,9 @@
 post:
-  summary: Adding event participants to an event
-  description: Adding event participants to an event
-  operationId: addEventParticipants
+  summary: join event
+  description: イベントに参加する
+  operationId: joinEvent
+  tags:
+    - visitor
   requestBody:
     required: true
     content:
@@ -9,13 +11,13 @@ post:
         schema:
           type: object
           required:
-            - eventID
-            - notificationID
+            - eventId
+            - registrationId
           properties:
-            eventID:
+            eventId:
               $ref: ~/component/id.yaml#/eventID
-            notificationID:
-              $ref: ~/component/id.yaml#/notificationID
+            registrationId:
+              $ref: ~/component/id.yaml#/registrationID
   responses:
     200:
       description: OK
@@ -23,10 +25,13 @@ post:
         application/json:
           schema:
             type: object
+            required:
+              - visitor
+              - event
             properties:
-              eventData:
+              visitor:
+                $ref: ~/component/visitor.yaml#/RegisterVisitor
+              event:
                 $ref: ~/component/event.yaml#/Event
-              visitorData:
-                $ref: ~/component/visitor.yaml#/Visitor
     400:
       description: Bad Request
