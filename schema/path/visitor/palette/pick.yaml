@@ -18,8 +18,8 @@ post:
           properties:
             eventId:
               $ref: ~/component/id.yaml#/eventID
-            spotId:
-              $ref: ~/component/id.yaml#/spotID
+            hwId:
+              $ref: ~/component/id.yaml#/hwID
   responses:
     204:
       description: No Content
