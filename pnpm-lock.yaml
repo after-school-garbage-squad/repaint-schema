@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@redocly/cli':
-    specifier: 1.0.0-beta.129
-    version: 1.0.0-beta.129(@babel/core@7.22.5)(core-js@3.31.0)(react-is@18.2.0)(webpack@5.88.0)
+    specifier: 1.0.2
+    version: 1.0.2(@babel/core@7.22.5)(core-js@3.31.0)(react-is@18.2.0)(webpack@5.88.0)
   '@types/mkdirp':
     specifier: 2.0.0
     version: 2.0.0
@@ -567,12 +567,12 @@ packages:
       uri-js: 4.4.1
     dev: true
 
-  /@redocly/cli@1.0.0-beta.129(@babel/core@7.22.5)(core-js@3.31.0)(react-is@18.2.0)(webpack@5.88.0):
-    resolution: {integrity: sha512-FMBELn58I1qgOuqVP97XrSCJfChf5kJ6WXjjW/IWfCVd3K4pwwowG1I4FzlxJZXJsGM+79mA/9VQlmJaTamGtg==}
+  /@redocly/cli@1.0.2(@babel/core@7.22.5)(core-js@3.31.0)(react-is@18.2.0)(webpack@5.88.0):
+    resolution: {integrity: sha512-IWuo5V2ZKSdvQMgNx05PHBlv1YvqJH3/nX52qslooEtqsvOaCUnZIm/aCd1zw2EW5Ub2+VLb51LqMt6mDF/9vQ==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
-      '@redocly/openapi-core': 1.0.0-beta.129
+      '@redocly/openapi-core': 1.0.2
       assert-node-version: 1.0.3
       chokidar: 3.5.3
       colorette: 1.4.0
@@ -600,8 +600,8 @@ packages:
       - webpack
     dev: true
 
-  /@redocly/openapi-core@1.0.0-beta.129:
-    resolution: {integrity: sha512-Oe+JVY6b7nb1p9KKWW0uJ7dCR7eHEZiyTcvru21chC6RyHFJyN/schYWxKFffFK0wc6jUDWqIdVktsPeiN0Kuw==}
+  /@redocly/openapi-core@1.0.2:
+    resolution: {integrity: sha512-53dzhmG2bsi/8rcAAgBKk9ZLMR035VHgN7oSM3+BM4UAIoNBg6lMC/ChHSf9zO+GrX5qtuWVPqHhjjMti3SAlQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@redocly/ajv': 8.11.0
@@ -1814,7 +1814,7 @@ packages:
       react-dom: ^16.8.4 || ^17.0.0
       styled-components: ^4.1.1 || ^5.1.1
     dependencies:
-      '@redocly/openapi-core': 1.0.0-beta.129
+      '@redocly/openapi-core': 1.0.2
       classnames: 2.3.2
       core-js: 3.31.0
       decko: 1.2.0
