@@ -8,7 +8,7 @@ get:
     - bearerAuth: []
   parameters:
     - $ref: ~/parameter/path.yaml#/eventID
-    - $ref: ~/parameter/query.yaml#/spotID
+    - $ref: ~/parameter/query.yaml#/spotId
   responses:
     200:
       description: OK

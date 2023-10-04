@@ -6,8 +6,8 @@ get:
     - visitor
   parameters:
     - $ref: ~/parameter/path.yaml#/visitorID
-    - $ref: ~/parameter/query.yaml#/eventID
-    - $ref: ~/parameter/query.yaml#/visitorImageID
+    - $ref: ~/parameter/query.yaml#/eventId
+    - $ref: ~/parameter/query.yaml#/visitorImageId
   responses:
     200:
       description: OK

@@ -8,7 +8,7 @@ get:
     - bearerAuth: []
   parameters:
     - $ref: ~/parameter/path.yaml#/eventID
-    - $ref: ~/parameter/query.yaml#/eventImageID
+    - $ref: ~/parameter/query.yaml#/eventImageId
   responses:
     200:
       description: OK
