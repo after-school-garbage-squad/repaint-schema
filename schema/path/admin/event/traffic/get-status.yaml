@@ -14,9 +14,14 @@ get:
       content:
         application/json:
           schema:
-            type: array
-            items:
-              $ref: ~/component/traffic.yaml#/TrafficStatus
+            type: object
+            required:
+              - traffics
+            properties:
+              traffics:
+                type: array
+                items:
+                  $ref: ~/component/traffic.yaml#/TrafficStatus
     400:
       description: Bad Request
     401:
