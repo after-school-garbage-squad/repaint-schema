@@ -13,9 +13,14 @@ get:
       content:
         application/json:
           schema:
-            type: array
-            items:
-              $ref: ~/component/id.yaml#/visitorImageID
+            type: object
+            required:
+              - images
+            properties:
+              images:
+                type: array
+                items:
+                  $ref: ~/component/id.yaml#/visitorImageID
     400:
       description: Bad Request
     404:

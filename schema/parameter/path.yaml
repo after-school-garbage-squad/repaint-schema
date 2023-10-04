@@ -2,14 +2,14 @@ components:
   parameters:
     eventID:
       in: path
-      name: eventId
+      name: eventID
       description: イベントのパブリックID
       required: true
       schema:
         $ref: ~/component/id.yaml#/eventID
     visitorID:
       in: path
-      name: visitorId
+      name: visitorID
       description: 参加者のパブリックID
       required: true
       schema:
