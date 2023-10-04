@@ -1,2 +1,44 @@
 components:
   parameters:
+    visitorID:
+      in: query
+      name: visitorID
+      description: 参加者のパブリックID
+      required: true
+      schema:
+        $ref: ~/component/id.yaml#/visitorID
+    eventImageID:
+      in: query
+      name: eventImageID
+      description: イベントのデフォルト画像のID
+      required: true
+      schema:
+        $ref: ~/component/id.yaml#/eventImageID
+    hwID:
+      in: query
+      name: hwID
+      description: ビーコンのハードウェアID
+      required: true
+      schema:
+        $ref: ~/component/id.yaml#/hwID
+    spotID:
+      in: query
+      name: spotID
+      description: スポットのパブリックID
+      required: true
+      schema:
+        $ref: ~/component/id.yaml#/spotID
+    eventID:
+      in: query
+      name: eventID
+      description: イベントのパブリックID
+      required: true
+      schema:
+        $ref: ~/component/id.yaml#/eventID
+    visitorImageID:
+      in: query
+      name: visitorImageID
+      description: 参加者が撮影した画像のID
+      required: true
+      schema:
+        $ref: ~/component/id.yaml#/visitorImageID

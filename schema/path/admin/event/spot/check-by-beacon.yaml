@@ -8,17 +8,7 @@ get:
     - bearerAuth: []
   parameters:
     - $ref: ~/parameter/path.yaml#/eventID
-  requestBody:
-    required: true
-    content:
-      application/json:
-        schema:
-          type: object
-          required:
-            - hwId
-          properties:
-            hwId:
-              $ref: ~/component/id.yaml#/hwID
+    - $ref: ~/parameter/query.yaml#/hwID
   responses:
     200:
       description: OK
