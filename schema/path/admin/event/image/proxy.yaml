@@ -4,8 +4,6 @@ get:
   operationId: getDefaultImageURL
   tags:
     - admin
-  security:
-    - bearerAuth: []
   parameters:
     - $ref: ~/parameter/path.yaml#/eventID
     - $ref: ~/parameter/query.yaml#/eventImageId
