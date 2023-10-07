@@ -12,8 +12,8 @@ devDependencies:
     specifier: 2.0.0
     version: 2.0.0
   '@types/node':
-    specifier: 20.8.2
-    version: 20.8.2
+    specifier: 20.8.3
+    version: 20.8.3
   chalk:
     specifier: 5.3.0
     version: 5.3.0
@@ -1805,8 +1805,8 @@ packages:
     resolution: {integrity: sha512-DGhiXKOHSFVVm+PJD+9Y0ObxXLeG6qwc0HoOn+ooQKeNNu+T2mEJCM5UBDUREKAggl9MHYjb5E71PAmx6MbzIg==}
     dev: true
 
-  /@types/node@20.8.2:
-    resolution: {integrity: sha512-Vvycsc9FQdwhxE3y3DzeIxuEJbWGDsnrxvMADzTDF/lcdR9/K+AQIeAghTQsHtotg/q0j3WEOYS/jQgSdWue3w==}
+  /@types/node@20.8.3:
+    resolution: {integrity: sha512-jxiZQFpb+NlH5kjW49vXxvxTjeeqlbsnTAdBTKpzEdPs9itay7MscYXz3Fo9VYFEsfQ6LJFitHad3faerLAjCw==}
     dev: true
 
   /@types/stylis@4.2.1:
