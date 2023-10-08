@@ -1,6 +1,6 @@
 post:
   summary: disable bonus
-  description: ボーナスを無効にする
+  description: 人流制御を無効にする(ボーナスを無効にする)
   operationId: disableBonus
   tags:
     - admin

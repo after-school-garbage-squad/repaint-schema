@@ -1,7 +1,7 @@
 post:
-  summary: control traffic
-  description: 人流を制御する
-  operationId: controlTraffic
+  summary: enable bonus
+  description: 人流制御を有効にする(ボーナスを有効にする)
+  operationId: enableBonus
   tags:
     - admin
   security:
