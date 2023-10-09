@@ -1,6 +1,6 @@
 get:
   summary: get visitor image list
-  description: 参加者に紐づく写真の一覧を取得する
+  description: 参加者に紐づくグレースケールの写真の一覧を取得する
   operationId: getVisitorImages
   tags:
     - visitor
@@ -20,7 +20,7 @@ get:
               images:
                 type: array
                 items:
-                  $ref: ~/component/id.yaml#/visitorImageID
+                  type: string
     400:
       description: Bad Request
     404:
