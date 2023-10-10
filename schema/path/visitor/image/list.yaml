@@ -20,7 +20,16 @@ get:
               images:
                 type: array
                 items:
-                  type: string
+                  type: object
+                  required:
+                    - imageId
+                    - url
+                  properties:
+                    imageId:
+                      $ref: ~/component/id.yaml#/visitorImageID
+                    url:
+                      type: string
+                      format: uri
     400:
       description: Bad Request
     404:
