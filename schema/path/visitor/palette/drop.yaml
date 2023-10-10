@@ -14,7 +14,7 @@ post:
           type: object
           required:
             - eventId
-            - spotId
+            - hwId
           properties:
             eventId:
               $ref: ~/component/id.yaml#/eventID
