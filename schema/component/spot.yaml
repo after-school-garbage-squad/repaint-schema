@@ -6,22 +6,30 @@ components:
       required:
         - spotId
         - name
+        - beacon
         - isPick
         - bonus
-        - hwId
-        - serviceUuid
       properties:
         spotID:
           $ref: ~/component/id.yaml#/spotID
         name:
           type: string
           description: スポット名
+        beacon:
+          $ref: ~/component/spot.yaml#/Beacon
         isPick:
           type: boolean
           description: pickableなスポットかどうか
         bonus:
           type: boolean
           description: スポットのステータスがボーナスかどうか
+    Beacon:
+      description: ビーコン
+      type: object
+      required:
+        - hwId
+        - serviceUuid
+      properties:
         hwId:
           type: string
           description: ビーコンのハードウェアID
