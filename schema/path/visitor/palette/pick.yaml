@@ -25,3 +25,5 @@ post:
       description: No Content
     400:
       description: Bad Request
+    409:
+      description: Conflict

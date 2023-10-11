@@ -21,7 +21,16 @@ post:
             hwId:
               $ref: ~/component/id.yaml#/hwID
   responses:
-    204:
-      description: No Content
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - isUpdated
+            properties:
+              isUpdated:
+                type: boolean
     400:
       description: Bad Request
