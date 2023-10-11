@@ -1,7 +1,7 @@
 post:
-  summary: scan spot
-  description: spotをスキャンする
-  operationId: scanSpot
+  summary: scanned spot
+  description: spotをスキャンしたことを記録する
+  operationId: scannedSpot
   tags:
     - visitor
   parameters:
