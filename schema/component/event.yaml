@@ -24,7 +24,7 @@ components:
         spots:
           type: array
           items:
-            $ref: ~/component/spot.yaml#/Spot
+            $ref: ~/component/spot.yaml#/SpotModel
         images:
           type: array
           items:
