@@ -68,8 +68,6 @@ paths:
     $ref: ./path/visitor/image/proxy.yaml
   /visitor/{visitorID}/image/check-update:
     $ref: ./path/visitor/image/check-update.yaml
-  /visitor/{visitorID}/image/check-download:
-    $ref: ./path/visitor/image/check-download.yaml
   /visitor/{visitorID}/palette/pick:
     $ref: ./path/visitor/palette/pick.yaml
   /admin/event/{eventID}/spot/register:
