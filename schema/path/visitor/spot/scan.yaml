@@ -1,7 +1,7 @@
 post:
-  summary: drop palette
-  description: paletteをdropする
-  operationId: dropPalette
+  summary: scan spot
+  description: spotをスキャンする
+  operationId: scanSpot
   tags:
     - visitor
   parameters:

@@ -70,8 +70,6 @@ paths:
     $ref: ./path/visitor/image/check-update.yaml
   /visitor/{visitorID}/image/check-download:
     $ref: ./path/visitor/image/check-download.yaml
-  /visitor/{visitorID}/palette/drop:
-    $ref: ./path/visitor/palette/drop.yaml
   /visitor/{visitorID}/palette/pick:
     $ref: ./path/visitor/palette/pick.yaml
   /admin/event/{eventID}/spot/register:
@@ -86,6 +84,8 @@ paths:
     $ref: ./path/admin/event/spot/update.yaml
   /admin/event/{eventID}/spot/delete:
     $ref: ./path/admin/event/spot/delete.yaml
+  /visitor/{visitorID}/spot/scan:
+    $ref: ./path/visitor/spot/scan.yaml
   /admin/event/{eventID}/traffic/get-status:
     $ref: ./path/admin/event/traffic/get-status.yaml
   /admin/event/{eventID}/traffic/enable-bonus:
