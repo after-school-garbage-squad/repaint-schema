@@ -28,9 +28,9 @@ post:
           schema:
             type: object
             required:
-              - isUpdated
+              - isBonus
             properties:
-              isUpdated:
+              isBonus:
                 type: boolean
     400:
       description: Bad Request
