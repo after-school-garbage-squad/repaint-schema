@@ -1,0 +1,24 @@
+get:
+  summary: Get is complete palette
+  description: パレットを取得し切ったかどうかを返す
+  operationId: isPaletteCompleted
+  tags:
+    - visitor
+  parameters:
+    - $ref: ~/parameter/path.yaml#/visitorID
+    - $ref: ~/parameter/query.yaml#/eventId
+  responses:
+    200:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - isCompleted
+            properties:
+              isCompleted:
+                type: boolean
+                description: パレットを取得し切ったかどうか
+    400:
+      description: Bad Request
