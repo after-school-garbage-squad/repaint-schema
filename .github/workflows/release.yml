@@ -26,7 +26,7 @@ jobs:
         run: |
           pnpm bundle
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "./bundled"
       - name: Deploy to GitHub Pages
