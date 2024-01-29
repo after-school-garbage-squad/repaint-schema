@@ -9,7 +9,7 @@
     "chokidar": "3.5.3",
     "concurrently": "8.2.2",
     "mkdirp": "3.0.1",
-    "prettier": "2.8.8",
+    "prettier": "3.2.4",
     "tsx": "4.7.0",
     "typescript": "5.3.3",
     "url-join": "5.0.0",
